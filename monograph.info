@@ -1,0 +1,43 @@
+; part of our profile
+
+name = Monograph
+description = Create an artist's portfolio site
+core = 7.x
+version = "0.1"
+
+; INSTALL FILES
+
+files[] = "monograph.profile"
+
+; CORE
+; Core
+dependencies[] = contact
+dependencies[] = dblog
+dependencies[] = field_ui
+dependencies[] = file
+dependencies[] = menu
+dependencies[] = path
+dependencies[] = taxonomy
+dependencies[] = toolbar
+dependencies[] = block
+
+; Core other
+dependencies[] = image
+dependencies[] = list
+dependencies[] = number
+dependencies[] = options
+
+; dependencies[] = "color"
+dependencies[] = "comment"
+; dependencies[] = "contextual"
+dependencies[] = "dashboard"
+dependencies[] = "help"
+; dependencies[] = "search"
+dependencies[] = "shortcut"
+dependencies[] = "overlay"
+dependencies[] = "rdf"
+
+; Contrib
+dependencies[] = "colorbox"
+dependencies[] = date
+dependencies[] = link

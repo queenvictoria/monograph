@@ -1,0 +1,13 @@
+; build runs first. it is the single file that begets all others.
+; The installation profile referred to in the build stub should be the projects profile (ie itself).
+; To import elements from other profiles you can use an 'include' statement in your profile make file.
+
+; Using Build Kit for Drupal Core and associated patches
+includes[] = http://drupalcode.org/project/buildkit.git/blob_plain/refs/heads/7.x-2.x:/distro.make
+
+; Installation Profile
+
+projects[monograph][type] = "profile"
+projects[monograph][download][type] = "git"
+projects[monograph][download][url] = "git@github.com:queenvictoria/monograph.git"
+projects[monograph][download][branch] = "master"
