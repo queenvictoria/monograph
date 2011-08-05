@@ -52,3 +52,6 @@ dependencies[] = media
 dependencies[] = media_internet
 dependencies[] = styles
 dependencies[] = file_styles
+
+; Monograph features
+dependencies[] = monograph_projects
