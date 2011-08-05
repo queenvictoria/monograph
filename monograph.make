@@ -16,9 +16,10 @@ projects[entity][subdir] = "contrib"
 projects[views][subdir] = "contrib"
 projects[devel][subdir] = "developer"
 projects[libraries][subdir] = "contrib"
-projects[wysiwyg][subdir] = "developer"
-projects[features][subdir] = "developer"
-
+projects[wysiwyg][subdir] = "contrib"
+projects[features][subdir] = "contrib"
+libraries[ckeditor][download][type] = "get"
+libraries[ckeditor][download][url] = "http://download.cksource.com/CKEditor/CKEditor/CKEditor%203.4.2/ckeditor_3.4.2.tar.gz"
 
 ; content type widgets
 projects[link][subdir] = "contrib"
