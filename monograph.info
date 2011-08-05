@@ -38,6 +38,17 @@ dependencies[] = "overlay"
 dependencies[] = "rdf"
 
 ; Contrib
-dependencies[] = "colorbox"
+dependencies[] = "features"
+dependencies[] = wysiwyg
+dependencies[] = colorbox
 dependencies[] = date
 dependencies[] = link
+dependencies[] = field_collection
+dependencies[] = entity
+
+dependencies[] = ctools
+dependencies[] = file_entity
+dependencies[] = media
+dependencies[] = media_internet
+dependencies[] = styles
+dependencies[] = file_styles

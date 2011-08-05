@@ -11,14 +11,19 @@
 ; Include Build Kit install profile makefile via URL
 includes[] = http://drupalcode.org/project/buildkit.git/blob_plain/refs/heads/7.x-2.x:/drupal-org.make
 
-; content type widgets
-projects[link][subdir] = "contrib"
-projects[date][subdir] = "contrib"
-
 ; utils
+projects[entity][subdir] = "contrib"
 projects[views][subdir] = "contrib"
 projects[devel][subdir] = "developer"
 projects[libraries][subdir] = "contrib"
+projects[wysiwyg][subdir] = "developer"
+projects[features][subdir] = "developer"
+
+
+; content type widgets
+projects[link][subdir] = "contrib"
+projects[date][subdir] = "contrib"
+projects[field_collection][subdir] = "contrib"
 
 ; social
 projects[addthis][subdir] = "contrib"
@@ -34,3 +39,9 @@ libraries[colorbox][download][url] = "https://github.com/jackmoore/colorbox/tarb
 libraries[colorbox][destination] = "libraries"   
 
 ; media
+projects[ctools][subdir] = "contrib"
+projects[file_entity][subdir] = "contrib"
+projects[file_entity][version] = "1.x-dev"
+projects[media][subdir] = "contrib"
+projects[media][version] = "2.x-dev"
+projects[styles][subdir] = "contrib"
