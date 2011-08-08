@@ -72,7 +72,7 @@ function _media_configure_fields() {
 			'name' => 'caption',
 			'label' => 'Caption',
 			'description' => '',
-			'type' => 'long_text',
+			'type' => 'text_long',
 			'required' => FALSE,
 		),
 		'credit' => array(
