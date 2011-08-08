@@ -4,9 +4,14 @@
 3	pick up variables again in the preprocessor in includes/themes/theme.inc eg monograph_media_preprocess_monograph_media_video
 4	finally use the variables there writing the html . presumably there could be a monograph-media-video.tpl.php file too . which would take precedence ?
 
+fields are edited in the media library NOT the node editor. http://drupal.org/node/703336
+
 @todo
 
--	fields (caption/description/credit/alt)
+v	fields (caption/description/credit)
 -	why can't we get text info from providers ?
--	handle missing fields
--	pass in all fields
+v	handle missing fields (caption)
+v	pass in all fields (caption etc)
+-	configure or create image style size (eg: imagecache size)
+-	enable the monograph video display for preview at least (preview comes from youtube i think)
+-	use our themer to handle images too .

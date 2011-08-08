@@ -176,7 +176,7 @@ function monograph_projects_field_default_fields() {
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => '2',
+          'weight' => '3',
         ),
         'teaser' => array(
           'label' => 'hidden',
@@ -204,7 +204,7 @@ function monograph_projects_field_default_fields() {
           'summary_rows' => 5,
         ),
         'type' => 'text_textarea_with_summary',
-        'weight' => '3',
+        'weight' => '4',
       ),
     ),
   );
@@ -318,7 +318,7 @@ function monograph_projects_field_default_fields() {
           'module' => 'file',
           'settings' => array(),
           'type' => 'file_default',
-          'weight' => '4',
+          'weight' => '5',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -345,7 +345,7 @@ function monograph_projects_field_default_fields() {
           'progress_indicator' => 'throbber',
         ),
         'type' => 'file_generic',
-        'weight' => '6',
+        'weight' => '7',
       ),
     ),
   );
@@ -392,7 +392,7 @@ function monograph_projects_field_default_fields() {
             'image_style' => 'medium',
           ),
           'type' => 'image',
-          'weight' => '5',
+          'weight' => '6',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -423,7 +423,7 @@ function monograph_projects_field_default_fields() {
           'progress_indicator' => 'throbber',
         ),
         'type' => 'image_image',
-        'weight' => '5',
+        'weight' => '6',
       ),
     ),
   );
@@ -467,7 +467,7 @@ function monograph_projects_field_default_fields() {
           'module' => 'link',
           'settings' => array(),
           'type' => 'default',
-          'weight' => '3',
+          'weight' => '4',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -500,7 +500,7 @@ function monograph_projects_field_default_fields() {
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_field',
-        'weight' => '4',
+        'weight' => '5',
       ),
     ),
   );
@@ -536,7 +536,7 @@ function monograph_projects_field_default_fields() {
             'file_view_mode' => 'media_preview',
           ),
           'type' => 'media',
-          'weight' => '6',
+          'weight' => '7',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -568,7 +568,7 @@ function monograph_projects_field_default_fields() {
           'progress_indicator' => 'throbber',
         ),
         'type' => 'media_generic',
-        'weight' => '7',
+        'weight' => '8',
       ),
     ),
   );
@@ -577,7 +577,7 @@ function monograph_projects_field_default_fields() {
   $fields['node-project-field_project_type'] = array(
     'field_config' => array(
       'active' => '1',
-      'cardinality' => '1',
+      'cardinality' => '-1',
       'deleted' => '0',
       'entity_types' => array(),
       'field_name' => 'field_project_type',
@@ -599,7 +599,7 @@ function monograph_projects_field_default_fields() {
         'allowed_values' => array(
           0 => array(
             'parent' => '0',
-            'vocabulary' => '',
+            'vocabulary' => 'project_type',
           ),
         ),
       ),
@@ -613,11 +613,11 @@ function monograph_projects_field_default_fields() {
       'description' => '',
       'display' => array(
         'default' => array(
-          'label' => 'above',
+          'label' => 'hidden',
           'module' => 'taxonomy',
           'settings' => array(),
           'type' => 'taxonomy_term_reference_link',
-          'weight' => 7,
+          'weight' => '1',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -629,18 +629,19 @@ function monograph_projects_field_default_fields() {
       'entity_type' => 'node',
       'field_name' => 'field_project_type',
       'label' => 'Project type',
-      'required' => FALSE,
+      'required' => 0,
       'settings' => array(
         'user_register_form' => FALSE,
       ),
       'widget' => array(
+        'active' => 0,
         'module' => 'taxonomy',
         'settings' => array(
           'autocomplete_path' => 'taxonomy/autocomplete',
           'size' => 60,
         ),
         'type' => 'taxonomy_autocomplete',
-        'weight' => '8',
+        'weight' => '2',
       ),
     ),
   );
@@ -678,7 +679,7 @@ function monograph_projects_field_default_fields() {
             'edit' => 'Edit',
           ),
           'type' => 'field_collection_view',
-          'weight' => '1',
+          'weight' => '2',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -699,7 +700,7 @@ function monograph_projects_field_default_fields() {
         'module' => 'field_collection',
         'settings' => array(),
         'type' => 'field_collection_hidden',
-        'weight' => '2',
+        'weight' => '3',
       ),
     ),
   );

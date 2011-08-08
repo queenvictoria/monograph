@@ -1,8 +1,9 @@
 TO DO
 -	fix vimeo display
--	add captions/credits/titles/descriptions to media items 
+v	add captions/credits/titles/descriptions to media items 
 -	disable comments
 v	better ckeditor button selection
 -	add editor role
 -	add administrator shortcuts
+-	add editor shortcuts
 -	look at media gallery modules

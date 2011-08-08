@@ -14,14 +14,11 @@
 		}
 		
 //	install some modules to make the following work
-		$result = module_enable(array("shortcuts", "media", "monograph_projects", "monograph_media"));
+//		$result = module_enable(array("shortcuts", "media", "monograph_projects", "monograph_media"));
 
 		
 		_monograph_configure_wysiwyg();		
 		_monograph_configure_shortcuts();
-		
-//	add extra fields to media assets
-		_media_add_field_description();
 		
 //	disable comments - we can't disable it in .info as that causes standard_install to fail
 		module_disable(array("comments"));
@@ -31,6 +28,8 @@
 	function _monograph_configure_shortcuts() {
 		$set = shortcut_set_load(st('Default'));
 		$set->links[] =  array('link_path' => 'node/add/project', 'link_title' => st('Add project'));
+		$set->links[] =  array('link_path' => 'admin/content/media', 'link_title' => st('Media library'));
+		
 		shortcut_set_save($set);
 	}
 	
@@ -140,78 +139,3 @@ function _monograph_configure_wysiwyg() {
   }
 }
 	
-	
-/* 
-	from media dev profile 
-	http://drupalcode.org/project/media_dev.git/blob_plain/b554a5a0e58adf66c1d888ed702bf7bdba921ab1:/media_dev.install
-*/
-
-function _media_configure_formatters() {
-  foreach (array('filtered_html','full_html') as $f) {
-    $format = filter_format_load($f);
-    $format->filters['media_filter'] = array(
-      'status' => 1,
-      'weight' => 10,
-    );
-    filter_format_save($format);
-  }
-}
-
-function _media_add_default_files($files) {
-  $defaults = array (
-    'display' => TRUE,  );
-
-  foreach ($files as $filename) {
-    $scheme = variable_get('file_default_scheme', 'public') . '://';
-    $destination = file_stream_wrapper_uri_normalize($scheme . basename($filename));
-    
-    $file = file_save_data(file_get_contents($filename), $destination);
-  }
-}
-
-/**
- * Adds the tags field to all media bundles.
- */
-function _media_add_field_tags() {
-  foreach (media_type_get_types() as $bundle => $type) {
-    $instance = array(
-      'field_name' => 'field_tags',
-      'entity_type' => 'media',
-      'bundle' => $bundle,
-      'label' => 'Tags',
-      'widget' => array(
-        'type' => 'taxonomy_autocomplete',
-      ),
-
-      // @todo: implement this.
-      //'display' => array();
-    );
-    field_create_instance($instance);
-  }
-}
-
-/**
- * Adds a description field to all media bundles.
- * @todo: do this.
- */
-function _media_add_field_description() {
-
-  $field = array(
-    'field_name' => 'media_description',
-    'type' => 'text_long',
-    'translatable' => TRUE,
-  );
-  field_create_field($field);
-
-  foreach (media_type_get_types() as $bundle => $type) {
-    $instance = array(
-      'field_name' => 'media_description',
-      'entity_type' => 'media',
-      'bundle' => $bundle,
-      'label' => 'Description',
-      // @todo: implement this.
-      //'display' => array();
-    );
-    field_create_instance($instance);
-  }
-}

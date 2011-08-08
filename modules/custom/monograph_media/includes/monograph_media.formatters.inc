@@ -46,15 +46,7 @@ function monograph_media_file_formatter_video_view($file, $display, $langcode) {
 //        '#path' => $wrapper->getOriginalThumbnailPath(),
   //      '#path' => $wrapper->getLocalThumbnailPath(),
 	$wrapper = file_stream_wrapper_get_instance_by_uri($file->uri);
-//	print_r($file->field_caption);
-//	@todo can we abstract this out so that all fields are added?
-	if ( array_key_exists('und', $file->field_caption) ) {
-		$alt = $file->field_caption['und'][0]['safe_value'];
-		$title = $alt;
-	} else {
-		$alt = "";
-		$title = "";
-	}
+	
 	if (empty($file->override['wysiwyg'])) {
 		$element = array(
 			'#theme' => 'monograph_media_video',
@@ -64,14 +56,24 @@ function monograph_media_file_formatter_video_view($file, $display, $langcode) {
 			'#scheme' => $scheme,
 //			'#alt' => $file->alt,
 //			'#title' => $file->title,
-			'#alt' => $alt,
-			'#title' => $title,			
+//			'#alt' => $alt,
+//			'#title' => $title,			
 		);
 		foreach (array('width', 'height') as $setting) {
 			$element['#' . $setting] = isset($file->override[$setting]) ? $file->override[$setting] : $display['settings'][$setting];
 		}
-//	print_r($element);
-		$element['plonk'] = 'donkey';
+//	put in all the fields we have on the file
+		foreach ( $file as $key => $field ) {
+			if ( strpos($key, 'field_') === 0 ) {
+				$field_name = substr($key, 6);
+				if ( array_key_exists('und', $field) ) {
+					$element['#' . $field_name] = $field['und'][0]['safe_value'] ? $field['und'][0]['safe_value'] : '';
+				} else {
+					$element['#' . $field_name] = '';
+				}
+			}
+		}
+		
 		return $element;
 	}
 }

@@ -64,11 +64,11 @@ OUTPUT;
 //  $preset = styles_containers_available_styles('file', 'monograph_media', $preset_name);
 	$preset_name = "square_thumbnail";
 	$thumbnail = file_create_url(image_style_path($preset_name, $variables['thumbnail']));
-	$output = "<img src='$thumbnail' />";
+//	$output = "<img src='$thumbnail' />";
       $image_variables = array(
 //        'path' => $wrapper->getOriginalThumbnailPath(),
-        'alt' => $variables['alt'],
-        'title' => $variables['title'],
+        'alt' => $variables['media_caption'],
+        'title' => $variables['media_caption'],
         'getsize' => TRUE,
       );
         $image_variables['path'] = $variables['thumbnail'];
@@ -83,7 +83,7 @@ OUTPUT;
 	$options = array(
 		'attributes' => array(
 			'class' => array($variables['scheme'], 'monograph-video', $preset_name, implode('-', explode('/', $wrapper->getMimeType($uri)))),
-			'title' => $variables['title'],
+			'title' => $variables['media_caption'],
 		),
 		'html' => TRUE,
 	);
