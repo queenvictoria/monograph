@@ -1,0 +1,7 @@
+core = "7.x"
+dependencies[] = "media"
+
+name = "Monograph Media extensions"
+description = "Provides formatters for the Monograph profile"
+package = "Media"
+project = "monograph_media"

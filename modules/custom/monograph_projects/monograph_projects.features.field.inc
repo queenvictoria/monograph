@@ -10,14 +10,14 @@
 function monograph_projects_field_default_fields() {
   $fields = array();
 
-  // Exported field: 'field_collection_item-field_property-field_property_term'
-  $fields['field_collection_item-field_property-field_property_term'] = array(
+  // Exported field: 'field_collection_item-field_property-field_property_key'
+  $fields['field_collection_item-field_property-field_property_key'] = array(
     'field_config' => array(
       'active' => '1',
       'cardinality' => '1',
       'deleted' => '0',
       'entity_types' => array(),
-      'field_name' => 'field_property_term',
+      'field_name' => 'field_property_key',
       'foreign keys' => array(
         'tid' => array(
           'columns' => array(
@@ -58,7 +58,7 @@ function monograph_projects_field_default_fields() {
         ),
       ),
       'entity_type' => 'field_collection_item',
-      'field_name' => 'field_property_term',
+      'field_name' => 'field_property_key',
       'label' => 'Label',
       'required' => 0,
       'settings' => array(
@@ -99,11 +99,9 @@ function monograph_projects_field_default_fields() {
         ),
       ),
       'module' => 'text',
-      'settings' => array(
-        'max_length' => '255',
-      ),
+      'settings' => array(),
       'translatable' => '1',
-      'type' => 'text',
+      'type' => 'text_long',
     ),
     'field_instance' => array(
       'bundle' => 'field_property',
@@ -124,16 +122,16 @@ function monograph_projects_field_default_fields() {
       'label' => 'Value',
       'required' => 0,
       'settings' => array(
-        'text_processing' => '0',
+        'text_processing' => '1',
         'user_register_form' => FALSE,
       ),
       'widget' => array(
         'active' => 1,
         'module' => 'text',
         'settings' => array(
-          'size' => '60',
+          'rows' => '3',
         ),
-        'type' => 'text_textfield',
+        'type' => 'text_textarea',
         'weight' => '2',
       ),
     ),
@@ -178,7 +176,7 @@ function monograph_projects_field_default_fields() {
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => '0',
+          'weight' => '2',
         ),
         'teaser' => array(
           'label' => 'hidden',
@@ -206,7 +204,7 @@ function monograph_projects_field_default_fields() {
           'summary_rows' => 5,
         ),
         'type' => 'text_textarea_with_summary',
-        'weight' => '1',
+        'weight' => '3',
       ),
     ),
   );
@@ -246,11 +244,11 @@ function monograph_projects_field_default_fields() {
       'description' => '',
       'display' => array(
         'default' => array(
-          'label' => 'inline',
+          'label' => 'hidden',
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => '2',
+          'weight' => '0',
         ),
         'teaser' => array(
           'label' => 'hidden',
@@ -275,7 +273,7 @@ function monograph_projects_field_default_fields() {
           'size' => '60',
         ),
         'type' => 'text_textfield',
-        'weight' => '3',
+        'weight' => '1',
       ),
     ),
   );
@@ -316,7 +314,7 @@ function monograph_projects_field_default_fields() {
       'description' => '',
       'display' => array(
         'default' => array(
-          'label' => 'inline',
+          'label' => 'hidden',
           'module' => 'file',
           'settings' => array(),
           'type' => 'file_default',
@@ -387,7 +385,7 @@ function monograph_projects_field_default_fields() {
       'description' => '',
       'display' => array(
         'default' => array(
-          'label' => 'above',
+          'label' => 'hidden',
           'module' => 'image',
           'settings' => array(
             'image_link' => 'file',
@@ -465,11 +463,11 @@ function monograph_projects_field_default_fields() {
       'description' => '',
       'display' => array(
         'default' => array(
-          'label' => 'inline',
+          'label' => 'hidden',
           'module' => 'link',
           'settings' => array(),
           'type' => 'default',
-          'weight' => '1',
+          'weight' => '3',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -502,7 +500,7 @@ function monograph_projects_field_default_fields() {
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_field',
-        'weight' => '2',
+        'weight' => '4',
       ),
     ),
   );
@@ -532,7 +530,7 @@ function monograph_projects_field_default_fields() {
       'description' => '',
       'display' => array(
         'default' => array(
-          'label' => 'above',
+          'label' => 'hidden',
           'module' => 'media',
           'settings' => array(
             'file_view_mode' => 'default',
@@ -604,17 +602,17 @@ function monograph_projects_field_default_fields() {
           'settings' => array(
             'add' => 'Add',
             'delete' => 'Delete',
-            'description' => TRUE,
+            'description' => 1,
             'edit' => 'Edit',
           ),
           'type' => 'field_collection_view',
-          'weight' => '3',
+          'weight' => '1',
         ),
         'teaser' => array(
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '2',
+          'weight' => 0,
         ),
       ),
       'entity_type' => 'node',
@@ -629,7 +627,7 @@ function monograph_projects_field_default_fields() {
         'module' => 'field_collection',
         'settings' => array(),
         'type' => 'field_collection_hidden',
-        'weight' => '4',
+        'weight' => '2',
       ),
     ),
   );

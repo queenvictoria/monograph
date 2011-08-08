@@ -14,6 +14,13 @@
 		}
 		
 		_monograph_configure_wysiwyg();
+		_monograph_configure_shortcuts();
+		
+//	add extra fields to media assets
+		_media_add_field_description();
+		
+//	disable comments - we can't disable it in .info as that causes standard_install to fail
+		module_disable(array("comments"));
 	}
 	
 	
@@ -27,7 +34,98 @@
 function _monograph_configure_wysiwyg() {
   //WYSIWYG Setup
   foreach (array('filtered_html','full_html') as $f) {
-    $wysiwyg_setting = array ( 'default' => 1, 'user_choose' => 0, 'show_toggle' => 1, 'theme' => 'advanced', 'language' => 'en', 'wysiwyg_buttons' => array ( 'default' => array ( 'Bold' => 1, 'Italic' => 1, 'Underline' => 0, 'Strike' => 0, 'JustifyLeft' => 0, 'JustifyCenter' => 0, 'JustifyRight' => 0, 'JustifyBlock' => 0, 'BulletedList' => 0, 'NumberedList' => 0, 'Outdent' => 0, 'Indent' => 0, 'Undo' => 0, 'Redo' => 0, 'Link' => 0, 'Unlink' => 0, 'Anchor' => 0, 'Image' => 0, 'TextColor' => 0, 'BGColor' => 0, 'Superscript' => 0, 'Subscript' => 0, 'Blockquote' => 0, 'Source' => 0, 'HorizontalRule' => 0, 'Cut' => 0, 'Copy' => 0, 'Paste' => 0, 'PasteText' => 0, 'PasteFromWord' => 0, 'ShowBlocks' => 0, 'RemoveFormat' => 0, 'SpecialChar' => 0, 'About' => 0, 'Format' => 0, 'Font' => 0, 'FontSize' => 0, 'Styles' => 0, 'Table' => 0, 'Find' => 0, 'Replace' => 0, 'SelectAll' => 0, 'Flash' => 0, 'Smiley' => 0, 'Maximize' => 0, 'SpellChecker' => 0, 'Scayt' => 0, ), 'drupal' => array ( 'media' => 1, 'break' => 0, ), ), 'toolbar_loc' => 'top', 'toolbar_align' => 'left', 'path_loc' => 'bottom', 'resizing' => 1, 'verify_html' => 1, 'preformatted' => 0, 'convert_fonts_to_spans' => 1, 'remove_linebreaks' => 1, 'apply_source_formatting' => 0, 'paste_auto_cleanup_on_paste' => 0, 'block_formats' => 'p,address,pre,h2,h3,h4,h5,h6,div', 'css_setting' => 'theme', 'css_path' => '', 'css_classes' => '', 'buttons' => array ( 'default' => array ( 'Bold' => 1, 'Italic' => 1, ), 'drupal' => array ( 'media' => 1, ), ), );
+    $wysiwyg_setting = array ( 
+		'default' => 1, 
+		'user_choose' => 0, 
+		'show_toggle' => 1, 
+		'theme' => 'advanced', 
+		'language' => 'en', 
+		'wysiwyg_buttons' => array ( 
+			'default' => array ( 
+				'Bold' => 1, 
+				'Italic' => 1, 
+				'Underline' => 0, 
+				'Strike' => 0, 
+				'JustifyLeft' => 0, 
+				'JustifyCenter' => 0, 
+				'JustifyRight' => 0, 
+				'JustifyBlock' => 0, 
+				'BulletedList' => 0, 
+				'NumberedList' => 0, 
+				'Outdent' => 0, 
+				'Indent' => 0, 
+				'Undo' => 0, 
+				'Redo' => 0, 
+				'Link' => 1, 
+				'Unlink' => 1, 
+				'Anchor' => 0, 
+				'Image' => 0, 
+				'TextColor' => 0, 
+				'BGColor' => 0, 
+				'Superscript' => 0, 
+				'Subscript' => 0, 
+				'Blockquote' => 1, 
+				'Source' => 0, 
+				'HorizontalRule' => 0, 
+				'Cut' => 0, 
+				'Copy' => 0, 
+				'Paste' => 0, 
+				'PasteText' => 0, 
+				'PasteFromWord' => 0, 
+				'ShowBlocks' => 1, 
+				'RemoveFormat' => 0, 
+				'SpecialChar' => 1, 
+				'About' => 0, 
+				'Format' => 0, 
+				'Font' => 0, 
+				'FontSize' => 0, 
+				'Styles' => 0, 
+				'Table' => 0, 
+				'Find' => 0, 
+				'Replace' => 0, 
+				'SelectAll' => 0, 
+				'Flash' => 0, 
+				'Smiley' => 0, 
+				'Maximize' => 0, 	// doesn't work with admin toolbar
+				'SpellChecker' => 0, 
+				'Scayt' => 0, 
+			), 
+			'drupal' => array ( 
+				'media' => 1, 
+				'break' => 0, 
+			), 
+		), 
+		'toolbar_loc' => 'top', 
+		'toolbar_align' => 'left', 
+		'path_loc' => 'bottom', 
+		'resizing' => 1, 
+		'verify_html' => 1, 
+		'preformatted' => 0, 
+		'convert_fonts_to_spans' => 1, 
+		'remove_linebreaks' => 1, 
+		'apply_source_formatting' => 0, 
+		'paste_auto_cleanup_on_paste' => 0, 
+//		'block_formats' => 'p,address,pre,h2,h3,h4,h5,h6,div', 
+		'block_formats' => 'p,h3,h4', 		
+		'css_setting' => 'theme', 
+		'css_path' => '',
+		'css_classes' => '', 
+		'buttons' => array ( 
+			'default' => array ( 
+				'Bold' => 1, 
+				'Italic' => 1, 
+				'Link' => 1, 
+				'Unlink' => 1, 
+				'Blockquote' => 1, 
+				'SpecialChar' => 1, 
+				'Maximize' => 0, 	// doesn't work with admin toolbar
+				'ShowBlocks' => 1, 
+			), 
+			'drupal' => array ( 
+				'media' => 0, 
+			), 
+		), 
+	);
     db_merge('wysiwyg')
       ->key(array('format' => $f))
       ->fields(array(

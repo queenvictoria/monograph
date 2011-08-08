@@ -50,8 +50,10 @@ dependencies[] = ctools
 dependencies[] = file_entity
 dependencies[] = media
 dependencies[] = media_internet
-dependencies[] = styles
-dependencies[] = file_styles
+dependencies[] = media_vimeo
+dependencies[] = media_youtube
+; dependencies[] = styles
+; dependencies[] = file_styles
 
 ; Monograph features
 dependencies[] = monograph_projects

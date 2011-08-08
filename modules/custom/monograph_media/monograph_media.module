@@ -1,0 +1,76 @@
+<?php
+
+// Hooks and callbacks for integrating with File Entity module for display.
+	include_once('includes/monograph_media.formatters.inc');
+
+
+	function monograph_media_media_styles($mimetype = NULL) {
+/*
+		switch ($mimetype) {
+
+			case 'video/x-youtube':
+				return array(
+					'youtube_video' => t('YouTube Video'),
+					'youtube_thumbnail' => t('YouTube Thumbnail'),
+					'youtube_shadowbox' => t('YouTube Shadowbox'),
+					'youtube_link' => t('Youtube (link to original)'),
+				);
+			case 'image/x-flickr':
+				$styles = array(
+					'flickr__original' => t('Flickr (Original size)'),
+				);
+				foreach (image_styles() as $style_name => $style) {
+					$styles[$style_name] = t('Flickr (@style)', array('@style' => $style->name));
+				}
+				return $styles;
+		}
+*/
+		return array('monograph_media' => t("Monograph thumbnails"));
+	}
+	
+	
+/**
+ * Implements hook_theme().
+ */
+	function monograph_media_theme($existing, $type, $theme, $path) {
+		$path = drupal_get_path('module', 'monograph_media');
+		return array(
+			'monograph_media_preview_style' => array(
+				'variables' => array('style_name' => NULL),
+				'file' => 'monograph_media.theme.inc',
+				'path' => $path . '/includes/themes',
+			),
+			'monograph_media_field_formatter_styles' => array(
+				'variables' => array('element' => NULL, 'style' => NULL),
+				'file' => 'monograph_media.theme.inc',
+				'path' => $path . '/includes/themes',
+			),
+//	what variables will we pass through?
+			'monograph_media_video' => array(
+				'variables' => array(
+					'uri' => NULL, 
+					'width' => NULL, 
+					'height' => NULL,
+					'thumbnail' => NULL,
+					'scheme' => NULL,
+					'path' => NULL,
+					'thumbnail' => NULL,
+					'alt' => NULL, 
+					'title' => NULL,
+				),
+				'file' => 'monograph_media.theme.inc',
+				'path' => $path . '/includes/themes',
+				'template' => 'monograph-media-video',
+			),
+			'monograph_media_embed' => array(
+				'variables' => array('style_name' => NULL, 'uri' => NULL, 'alt' => NULL, 'title' => NULL),
+				'file' => 'monograph_media.theme.inc',
+				'path' => $path . '/includes/themes',
+			),
+			'monograph_media_styles' => array(
+				'variables' => array('element' => NULL, 'style' => NULL),
+				'file' => 'monograph_media.theme.inc',
+				'path' => $path . '/includes/themes',
+			),
+		);
+	}

@@ -25,6 +25,7 @@ libraries[ckeditor][download][url] = "http://download.cksource.com/CKEditor/CKEd
 projects[link][subdir] = "contrib"
 projects[date][subdir] = "contrib"
 projects[field_collection][subdir] = "contrib"
+projects[field_collection][version] = "1.x-dev"
 
 ; social
 projects[addthis][subdir] = "contrib"
@@ -45,7 +46,11 @@ projects[file_entity][subdir] = "contrib"
 projects[file_entity][version] = "1.x-dev"
 projects[media][subdir] = "contrib"
 projects[media][version] = "2.x-dev"
-projects[styles][subdir] = "contrib"
+; titles on media fields http://drupal.org/node/1034034
+projects[media][patch][1034034] = http://drupal.org/files/issues/media_field_title_reroll.patch
+; projects[styles][subdir] = "contrib"
 projects[media_youtube][subdir] = "contrib"
 projects[media_vimeo][subdir] = "contrib"
 projects[media_vimeo][version] = "1.x-dev"
+; add in global configuration of vimeo player
+projects[media_vimeo][patch][1229304] = http://drupal.org/files/issues/video_display_settings.patch
