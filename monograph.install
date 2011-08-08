@@ -18,13 +18,15 @@
 
 		
 		_monograph_configure_wysiwyg();		
-		_monograph_configure_shortcuts();
+//	moved to features
+//		_monograph_configure_shortcuts();
 		
 //	disable comments - we can't disable it in .info as that causes standard_install to fail
 		module_disable(array("comments"));
 	}
 	
 	
+//	moved to features
 	function _monograph_configure_shortcuts() {
 		$set = shortcut_set_load(st('Default'));
 		$set->links[] =  array('link_path' => 'node/add/project', 'link_title' => st('Add project'));
