@@ -47,6 +47,7 @@ function monograph_media_file_formatter_video_view($file, $display, $langcode) {
   //      '#path' => $wrapper->getLocalThumbnailPath(),
 	$wrapper = file_stream_wrapper_get_instance_by_uri($file->uri);
 //	print_r($file->field_caption);
+//	@todo can we abstract this out so that all fields are added?
 	if ( array_key_exists('und', $file->field_caption) ) {
 		$alt = $file->field_caption['und'][0]['safe_value'];
 		$title = $alt;

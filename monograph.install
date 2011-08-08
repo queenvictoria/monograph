@@ -13,7 +13,11 @@
 			variable_set($v_name, $v_value);
 		}
 		
-		_monograph_configure_wysiwyg();
+//	install some modules to make the following work
+		$result = module_enable(array("shortcuts", "media", "monograph_projects", "monograph_media"));
+
+		
+		_monograph_configure_wysiwyg();		
 		_monograph_configure_shortcuts();
 		
 //	add extra fields to media assets

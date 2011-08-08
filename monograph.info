@@ -52,6 +52,7 @@ dependencies[] = media
 dependencies[] = media_internet
 dependencies[] = media_vimeo
 dependencies[] = media_youtube
+dependencies[] = monograph_media
 ; dependencies[] = styles
 ; dependencies[] = file_styles
 
