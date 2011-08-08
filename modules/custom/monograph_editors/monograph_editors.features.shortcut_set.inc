@@ -9,9 +9,9 @@
  */
 function monograph_editors_shortcut_default_shortcut_set() {
   $shortcut_sets = array();
-  $shortcut_sets['shortcut-set-2'] = array(
-    'set_name' => 'shortcut-set-2',
-    'title' => 'Editors set',
+  $shortcut_sets['shortcut-set-1'] = array(
+    'set_name' => 'shortcut-set-1',
+    'title' => 'Default',
   );
   return $shortcut_sets;
 }

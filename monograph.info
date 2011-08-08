@@ -58,4 +58,5 @@ dependencies[] = monograph_media
 
 ; Monograph features
 dependencies[] = monograph_projects
-dependencies[] = monograph_editor
+dependencies[] = monograph_editors
+; dependencies[] = monograph_permissions
