@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * monograph_editor.features.menu_links.inc
+ * monograph_editors.features.menu_links.inc
  */
 
 /**
- * Implements hook_menu_default_menu_links().
+ * Implementation of hook_menu_default_menu_links().
  */
-function monograph_editor_menu_default_menu_links() {
+function monograph_editors_menu_default_menu_links() {
   $menu_links = array();
 
   // Exported menu link: shortcut-set-2:admin/content
