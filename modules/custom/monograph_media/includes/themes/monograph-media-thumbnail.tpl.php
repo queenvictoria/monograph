@@ -1,13 +1,13 @@
 <?php
 
 /**
- * @file media_monograph/includes/themes/media-monograph-video.tpl.php
+ * @file media_monograph/includes/themes/media-monograph-thumbnail.tpl.php
  *
- * Template file for theme('media_monograph_video').
+ * Template file for theme('media_monograph_thumbnail').
  *
  * Variables available:
- *  $uri - The uri to the monograph video, such as monograph://v/xsy7x8c9.
- *  $video_id - The unique identifier of the monograph video.
+ *  $uri - The uri to the monograph thumbnail, such as monograph://v/xsy7x8c9.
+ *  $thumbnail_id - The unique identifier of the monograph thumbnail.
  *  $width - The width to render.
  *  $height - The height to render.
  *  $autoplay - If TRUE, then start the player automatically when displaying.

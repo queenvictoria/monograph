@@ -20,8 +20,8 @@ function monograph_media_file_formatter_info() {
     'settings callback' => 'monograph_media_file_formatter_video_settings',
   );
   $formatters['monograph_media_image'] = array(
-    'label' => t('YouTube Preview Image'),
-    'file types' => array('video'),
+    'label' => t('Monograph thumbnail'),
+    'file types' => array('image'),
     'default settings' => array(
       'width' => 100,
       'height' => 100,
@@ -46,6 +46,13 @@ function monograph_media_file_formatter_video_view($file, $display, $langcode) {
 //        '#path' => $wrapper->getOriginalThumbnailPath(),
   //      '#path' => $wrapper->getLocalThumbnailPath(),
 	$wrapper = file_stream_wrapper_get_instance_by_uri($file->uri);
+	$parts = $wrapper->get_parameters();
+	$variables['video_id'] = check_plain($parts['v']);
+	$external_link = $wrapper->getExternalUrl();
+//	@todo - fix this up as it is using the youtube url format not the vimeo one . should be done
+//	in media_vimeo and patched / submitted
+	if ( $scheme == 'vimeo' )
+		$external_link = "http://vimeo.com/" . $variables['video_id'];
 	
 	if (empty($file->override['wysiwyg'])) {
 		$element = array(
@@ -53,6 +60,7 @@ function monograph_media_file_formatter_video_view($file, $display, $langcode) {
 			'#uri' => $file->uri,
 			'#path' => $wrapper->getOriginalThumbnailPath(),
 			'#thumbnail' => $wrapper->getLocalThumbnailPath(),
+			'#external' => $external_link,
 			'#scheme' => $scheme,
 //			'#alt' => $file->alt,
 //			'#title' => $file->title,
@@ -107,7 +115,60 @@ function monograph_media_file_formatter_video_settings($form, &$form_state, $set
 /**
  * Implements hook_file_formatter_FORMATTER_view().
  */
+
 function monograph_media_file_formatter_image_view($file, $display, $langcode) {
+	$scheme = file_uri_scheme($file->uri);
+  // WYSIWYG does not yet support video inside a running editor instance.
+// schemes are the bit before the :// . eg : youtube:// vimeo:// etc.
+//  if ($scheme == 'youtube' && empty($file->override['wysiwyg'])) {
+//        '#path' => $wrapper->getOriginalThumbnailPath(),
+  //      '#path' => $wrapper->getLocalThumbnailPath(),
+	$wrapper = file_stream_wrapper_get_instance_by_uri($file->uri);
+	
+//	print $wrapper->getDirectoryPath() . "<br />";
+//	print $wrapper->getExternalUrl() . "<br />";
+//	print $wrapper->getMimeType() . "<br />";
+//	print $wrapper->getUri() . "<br />";
+	
+	$uri = $wrapper->getUri();
+	$preset_name = "large";
+	$external_link = file_create_url(image_style_path($preset_name, $uri));
+	
+	if (empty($file->override['wysiwyg'])) {
+		$element = array(
+			'#theme' => 'monograph_media_video',
+			'#uri' => $file->uri,
+			'#path' => $uri,
+			'#thumbnail' => $uri,
+// @todo this should be our large size not the straigh url
+			'#external' => $external_link,
+			'#scheme' => $scheme,
+//			'#alt' => $file->alt,
+//			'#title' => $file->title,
+//			'#alt' => $alt,
+//			'#title' => $title,			
+		);
+		foreach (array('width', 'height') as $setting) {
+			$element['#' . $setting] = isset($file->override[$setting]) ? $file->override[$setting] : $display['settings'][$setting];
+		}
+//	put in all the fields we have on the file
+		foreach ( $file as $key => $field ) {
+			if ( strpos($key, 'field_') === 0 ) {
+				$field_name = substr($key, 6);
+				if ( array_key_exists('und', $field) ) {
+					$element['#' . $field_name] = $field['und'][0]['safe_value'] ? $field['und'][0]['safe_value'] : '';
+				} else {
+					$element['#' . $field_name] = '';
+				}
+			}
+		}
+		
+		return $element;
+	}
+}
+
+
+function OLD_monograph_media_file_formatter_image_view($file, $display, $langcode) {
   $scheme = file_uri_scheme($file->uri);
 //  if ($scheme == 'youtube') {
     $wrapper = file_stream_wrapper_get_instance_by_uri($file->uri);

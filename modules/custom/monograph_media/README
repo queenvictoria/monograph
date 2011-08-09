@@ -12,6 +12,6 @@ v	fields (caption/description/credit)
 -	why can't we get text info from providers ?
 v	handle missing fields (caption)
 v	pass in all fields (caption etc)
--	configure or create image style size (eg: imagecache size)
+-	configure or create image style size (eg: imagecache size) - currently square_thumbnail and large ( should be preview and large )
 -	enable the monograph video display for preview at least (preview comes from youtube i think)
 -	use our themer to handle images too .
