@@ -47,7 +47,7 @@ function monograph_projects_field_default_fields() {
       'bundle' => 'field_property',
       'default_value' => NULL,
       'deleted' => '0',
-      'description' => '',
+      'description' => 'The type of property. For example size, medium, location, architect.',
       'display' => array(
         'default' => array(
           'label' => 'hidden',
@@ -107,7 +107,7 @@ function monograph_projects_field_default_fields() {
       'bundle' => 'field_property',
       'default_value' => NULL,
       'deleted' => '0',
-      'description' => '',
+      'description' => 'The value of a property. For example 1200x2400mm, fibreglass and lace, TZG.',
       'display' => array(
         'default' => array(
           'label' => 'hidden',
@@ -241,7 +241,7 @@ function monograph_projects_field_default_fields() {
       'bundle' => 'project',
       'default_value' => NULL,
       'deleted' => '0',
-      'description' => '',
+      'description' => 'This field will not be reformatted so display the date as you would like it shown. For example 2006–2011 or July 2007. Note: if you are expecting to sort on this date field you will need to use years only.',
       'display' => array(
         'default' => array(
           'label' => 'hidden',
@@ -301,8 +301,8 @@ function monograph_projects_field_default_fields() {
       ),
       'module' => 'file',
       'settings' => array(
-        'display_default' => 0,
-        'display_field' => 0,
+        'display_default' => 1,
+        'display_field' => 1,
         'uri_scheme' => 'public',
       ),
       'translatable' => '1',
@@ -311,7 +311,7 @@ function monograph_projects_field_default_fields() {
     'field_instance' => array(
       'bundle' => 'project',
       'deleted' => '0',
-      'description' => '',
+      'description' => 'Upload any non-media documents. For example PDFs of catalogues, invitations, articles or reviews.',
       'display' => array(
         'default' => array(
           'label' => 'hidden',
@@ -345,84 +345,6 @@ function monograph_projects_field_default_fields() {
           'progress_indicator' => 'throbber',
         ),
         'type' => 'file_generic',
-        'weight' => '7',
-      ),
-    ),
-  );
-
-  // Exported field: 'node-project-field_image'
-  $fields['node-project-field_image'] = array(
-    'field_config' => array(
-      'active' => '1',
-      'cardinality' => '-1',
-      'deleted' => '0',
-      'entity_types' => array(),
-      'field_name' => 'field_image',
-      'foreign keys' => array(
-        'fid' => array(
-          'columns' => array(
-            'fid' => 'fid',
-          ),
-          'table' => 'file_managed',
-        ),
-      ),
-      'indexes' => array(
-        'fid' => array(
-          0 => 'fid',
-        ),
-      ),
-      'module' => 'image',
-      'settings' => array(
-        'default_image' => 0,
-        'uri_scheme' => 'public',
-      ),
-      'translatable' => '1',
-      'type' => 'image',
-    ),
-    'field_instance' => array(
-      'bundle' => 'project',
-      'deleted' => '0',
-      'description' => '',
-      'display' => array(
-        'default' => array(
-          'label' => 'hidden',
-          'module' => 'image',
-          'settings' => array(
-            'image_link' => 'file',
-            'image_style' => 'medium',
-          ),
-          'type' => 'image',
-          'weight' => '6',
-        ),
-        'teaser' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
-        ),
-      ),
-      'entity_type' => 'node',
-      'field_name' => 'field_image',
-      'label' => 'Images',
-      'required' => 0,
-      'settings' => array(
-        'alt_field' => 1,
-        'file_directory' => '',
-        'file_extensions' => 'png gif jpg jpeg',
-        'max_filesize' => '10MB',
-        'max_resolution' => '',
-        'min_resolution' => '',
-        'title_field' => 1,
-        'user_register_form' => FALSE,
-      ),
-      'widget' => array(
-        'active' => 1,
-        'module' => 'image',
-        'settings' => array(
-          'preview_image_style' => 'thumbnail',
-          'progress_indicator' => 'throbber',
-        ),
-        'type' => 'image_image',
         'weight' => '6',
       ),
     ),
@@ -460,7 +382,7 @@ function monograph_projects_field_default_fields() {
       'bundle' => 'project',
       'default_value' => NULL,
       'deleted' => '0',
-      'description' => '',
+      'description' => 'Websites relevant to this project. ',
       'display' => array(
         'default' => array(
           'label' => 'hidden',
@@ -478,7 +400,7 @@ function monograph_projects_field_default_fields() {
       ),
       'entity_type' => 'node',
       'field_name' => 'field_link',
-      'label' => 'Link',
+      'label' => 'Links',
       'required' => 0,
       'settings' => array(
         'attributes' => array(
@@ -500,7 +422,7 @@ function monograph_projects_field_default_fields() {
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_field',
-        'weight' => '5',
+        'weight' => '7',
       ),
     ),
   );
@@ -527,7 +449,7 @@ function monograph_projects_field_default_fields() {
     'field_instance' => array(
       'bundle' => 'project',
       'deleted' => '0',
-      'description' => '',
+      'description' => 'All images, video and audio are media. Media can be used against multiple projects if required. Media are titled and captioned in the Media library (see the link above).',
       'display' => array(
         'default' => array(
           'label' => 'hidden',
@@ -558,6 +480,8 @@ function monograph_projects_field_default_fields() {
         'settings' => array(
           'allowed_schemes' => array(
             'public' => 'public',
+            'vimeo' => 'vimeo',
+            'youtube' => 'youtube',
           ),
           'allowed_types' => array(
             'audio' => 'audio',
@@ -568,7 +492,7 @@ function monograph_projects_field_default_fields() {
           'progress_indicator' => 'throbber',
         ),
         'type' => 'media_generic',
-        'weight' => '8',
+        'weight' => '5',
       ),
     ),
   );
@@ -610,7 +534,7 @@ function monograph_projects_field_default_fields() {
       'bundle' => 'project',
       'default_value' => NULL,
       'deleted' => '0',
-      'description' => '',
+      'description' => 'The categories to which this project belongs. For example: Works in progress, installation, performance or archived works.',
       'display' => array(
         'default' => array(
           'label' => 'hidden',
@@ -629,7 +553,7 @@ function monograph_projects_field_default_fields() {
       'entity_type' => 'node',
       'field_name' => 'field_project_type',
       'label' => 'Project type',
-      'required' => 0,
+      'required' => 1,
       'settings' => array(
         'user_register_form' => FALSE,
       ),
@@ -667,7 +591,7 @@ function monograph_projects_field_default_fields() {
       'bundle' => 'project',
       'default_value' => NULL,
       'deleted' => '0',
-      'description' => '',
+      'description' => 'A property is a quality of a project. For example its physical size, constituent parts, collaborators or the client of the project. ',
       'display' => array(
         'default' => array(
           'label' => 'hidden',
@@ -707,16 +631,23 @@ function monograph_projects_field_default_fields() {
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('A property is a quality of a project. For example its physical size, constituent parts, collaborators or the client of the project. ');
+  t('All images, video and audio are media. Media can be used against multiple projects if required. Media are titled and captioned in the Media library (see the link above).');
   t('Body');
   t('Date');
   t('Downloads');
-  t('Images');
   t('Label');
-  t('Link');
+  t('Links');
   t('Media');
   t('Project type');
   t('Properties');
+  t('The categories to which this project belongs. For example: Works in progress, installation, performance or archived works.');
+  t('The type of property. For example size, medium, location, architect.');
+  t('The value of a property. For example 1200x2400mm, fibreglass and lace, TZG.');
+  t('This field will not be reformatted so display the date as you would like it shown. For example 2006–2011 or July 2007. Note: if you are expecting to sort on this date field you will need to use years only.');
+  t('Upload any non-media documents. For example PDFs of catalogues, invitations, articles or reviews.');
   t('Value');
+  t('Websites relevant to this project. ');
 
   return $fields;
 }
