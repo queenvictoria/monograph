@@ -50,7 +50,7 @@ dependencies[] = transliteration
 dependencies[] = pathauto
 dependencies[] = globalredirect
 dependencies[] = xmlsitemap
-dependencies[] = google_analytics
+dependencies[] = googleanalytics
 
 dependencies[] = ctools
 dependencies[] = file_entity
