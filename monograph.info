@@ -48,7 +48,7 @@ dependencies[] = field_collection
 dependencies[] = entity
 dependencies[] = transliteration
 dependencies[] = pathauto
-dependencies[] = global_redirect
+dependencies[] = globalredirect
 dependencies[] = xmlsitemap
 dependencies[] = google_analytics
 
