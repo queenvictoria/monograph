@@ -3,7 +3,7 @@
 name = Monograph
 description = Create an artist's portfolio site
 core = 7.x
-version = "0.1"
+version = "0.2"
 
 ; INSTALL FILES
 
@@ -39,12 +39,18 @@ dependencies[] = "rdf"
 
 ; Contrib
 dependencies[] = "features"
+dependencies[] = libraries
 dependencies[] = wysiwyg
 dependencies[] = colorbox
 dependencies[] = date
 dependencies[] = link
 dependencies[] = field_collection
 dependencies[] = entity
+dependencies[] = transliteration
+dependencies[] = pathauto
+dependencies[] = global_redirect
+dependencies[] = xmlsitemap
+dependencies[] = google_analytics
 
 dependencies[] = ctools
 dependencies[] = file_entity
@@ -52,6 +58,7 @@ dependencies[] = media
 dependencies[] = media_internet
 dependencies[] = media_vimeo
 dependencies[] = media_youtube
+dependencies[] = insert
 dependencies[] = monograph_media
 ; dependencies[] = styles
 ; dependencies[] = file_styles

@@ -1,10 +1,15 @@
 TO DO
--	fix vimeo display
+v	fix vimeo display
 v	add captions/credits/titles/descriptions to media items 
 -	disable comments
 v	better ckeditor button selection
 v	add editor role
 -	add administrator shortcuts
 v	add editor shortcuts
--	look at media gallery modules
+x	look at media gallery modules
 -	add user 1 to editors
+
+
+Things we have to do post install
+-	Disable comments ( as we can't run standard_install without it )
+-	Enable monograph_permissions ( as running that during install causes a critical error )

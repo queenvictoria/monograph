@@ -16,6 +16,11 @@ projects[entity][subdir] = "contrib"
 projects[views][subdir] = "contrib"
 projects[devel][subdir] = "developer"
 projects[libraries][subdir] = "contrib"
+projects[transliteration][subdir] = "contrib"
+projects[pathauto][subdir] = "contrib"
+projects[global_redirect][subdir] = "contrib"
+projects[xmlsitemap][subdir] = "contrib"
+projects[google_analytics][subdir] = "contrib"
 projects[wysiwyg][subdir] = "contrib"
 projects[features][subdir] = "contrib"
 ; patch features to handle shortcut sets http://drupal.org/node/986968
@@ -56,3 +61,4 @@ projects[media_vimeo][subdir] = "contrib"
 projects[media_vimeo][version] = "1.x-dev"
 ; add in global configuration of vimeo player
 projects[media_vimeo][patch][1229304] = http://drupal.org/files/issues/video_display_settings.patch
+projects[insert][subdir] = "contrib"
