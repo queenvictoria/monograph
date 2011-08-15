@@ -10,6 +10,15 @@
 function monograph_permissions_user_default_permissions() {
   $permissions = array();
 
+  // Exported permission: access administration pages
+  $permissions['access administration pages'] = array(
+    'name' => 'access administration pages',
+    'roles' => array(
+      0 => 'administrator',
+    ),
+    'module' => 'system',
+  );
+
   // Exported permission: access content
   $permissions['access content'] = array(
     'name' => 'access content',
@@ -29,6 +38,16 @@ function monograph_permissions_user_default_permissions() {
       1 => 'editor',
     ),
     'module' => 'contact',
+  );
+
+  // Exported permission: access toolbar
+  $permissions['access toolbar'] = array(
+    'name' => 'access toolbar',
+    'roles' => array(
+      0 => 'administrator',
+      1 => 'editor',
+    ),
+    'module' => 'toolbar',
   );
 
   // Exported permission: access user contact forms
@@ -345,6 +364,16 @@ function monograph_permissions_user_default_permissions() {
       1 => 'editor',
     ),
     'module' => 'node',
+  );
+
+  // Exported permission: view the administration theme
+  $permissions['view the administration theme'] = array(
+    'name' => 'view the administration theme',
+    'roles' => array(
+      0 => 'administrator',
+      1 => 'editor',
+    ),
+    'module' => 'system',
   );
 
   return $permissions;
