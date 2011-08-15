@@ -47,6 +47,7 @@ dependencies[] = link
 dependencies[] = field_collection
 dependencies[] = entity
 dependencies[] = transliteration
+dependencies[] = token
 dependencies[] = pathauto
 dependencies[] = globalredirect
 dependencies[] = xmlsitemap
