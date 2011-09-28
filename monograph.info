@@ -52,6 +52,9 @@ dependencies[] = pathauto
 dependencies[] = globalredirect
 dependencies[] = xmlsitemap
 dependencies[] = googleanalytics
+dependencies[] = webform
+dependencies[] = nodequeue
+dependencies[] = smartqueue
 
 dependencies[] = ctools
 dependencies[] = file_entity

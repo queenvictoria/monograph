@@ -33,6 +33,10 @@ projects[features][patch][986968] = http://drupal.org/files/issues/features.shor
 libraries[ckeditor][download][type] = "get"
 libraries[ckeditor][download][url] = "http://download.cksource.com/CKEditor/CKEditor/CKEditor%203.4.2/ckeditor_3.4.2.tar.gz"
 
+; projects
+projects[nodequeue][subdir] = "contrib"
+projects[webform][subdir] = "contrib"
+
 ; content type widgets
 projects[link][subdir] = "contrib"
 projects[date][subdir] = "contrib"
