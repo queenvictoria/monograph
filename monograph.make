@@ -63,7 +63,7 @@ projects[file_entity][version] = "1.x-dev"
 projects[media][subdir] = "contrib"
 projects[media][version] = "2.x-dev"
 ; titles on media fields http://drupal.org/node/1034034
-projects[media][patch][1034034] = http://drupal.org/files/issues/media_field_title_reroll.patch
+; projects[media][patch][1034034] = http://drupal.org/files/issues/media_field_title_reroll.patch
 ; projects[styles][subdir] = "contrib"
 ;projects[media_youtube][subdir] = "contrib"
 ;projects[media_vimeo][subdir] = "contrib"
