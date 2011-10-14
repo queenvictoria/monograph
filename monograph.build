@@ -27,5 +27,5 @@ projects[drupal][patch][995156] = http://drupal.org/files/issues/995156-5_portab
 
 projects[monograph][type] = "profile"
 projects[monograph][download][type] = "git"
-projects[monograph][download][url] = "git://github.com:queenvictoria/monograph.git"
+projects[monograph][download][url] = "git://github.com/queenvictoria/monograph.git"
 projects[monograph][download][branch] = "master"
