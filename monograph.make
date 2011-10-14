@@ -56,12 +56,12 @@ libraries[colorbox][download][url] = "https://github.com/jackmoore/colorbox/tarb
 ; libraries[colorbox][download][tag] = v2.1.2
 libraries[colorbox][destination] = "libraries"   
 
-;; media
-;projects[ctools][subdir] = "contrib"
-;projects[file_entity][subdir] = "contrib"
-;projects[file_entity][version] = "1.x-dev"
-;projects[media][subdir] = "contrib"
-;projects[media][version] = "2.x-dev"
+; media
+projects[ctools][subdir] = "contrib"
+projects[file_entity][subdir] = "contrib"
+projects[file_entity][version] = "1.x-dev"
+projects[media][subdir] = "contrib"
+projects[media][version] = "2.x-dev"
 ;; titles on media fields http://drupal.org/node/1034034
 ;projects[media][patch][1034034] = http://drupal.org/files/issues/media_field_title_reroll.patch
 ;; projects[styles][subdir] = "contrib"
