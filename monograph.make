@@ -49,12 +49,13 @@ projects[addthis][version] = "2.1-beta1"
 
 ; asset handling
 ; colorbox & libraries
-projects[colorbox][subdir] = "contrib"
+; disable colorbox for testing
+; projects[colorbox][subdir] = "contrib"
 
-libraries[colorbox][download][type] = "get"
-libraries[colorbox][download][url] = "https://github.com/jackmoore/colorbox/tarball/master"
+;libraries[colorbox][download][type] = "get"
+;libraries[colorbox][download][url] = "https://github.com/jackmoore/colorbox/tarball/master"
 ; libraries[colorbox][download][tag] = v2.1.2
-libraries[colorbox][destination] = "libraries"   
+;libraries[colorbox][destination] = "libraries"   
 
 ; media
 projects[ctools][subdir] = "contrib"
