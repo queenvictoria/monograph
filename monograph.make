@@ -1,6 +1,6 @@
 ; what is the difference between make and build ? in the cossey / buildkit example 
-; `build` gets drupal core and patches it ( `distro` ) then retrieves the profile 
-; and `make` gets contrib modules ( via buildkits drupal-org.make file ) and 
+; -build- gets drupal core and patches it ( `distro` ) then retrieves the profile 
+; and -make- gets contrib modules ( via buildkits drupal-org.make file ) and 
 ; additions from cossey
 
 ; so build would run first
