@@ -1,6 +1,6 @@
 ; what is the difference between make and build ? in the cossey / buildkit example 
-; -build- gets drupal core and patches it ( `distro` ) then retrieves the profile 
-; and -make- gets contrib modules ( via buildkits drupal-org.make file ) and 
+; `build` gets drupal core and patches it ( `distro` ) then retrieves the profile 
+; and `make` gets contrib modules ( via buildkits drupal-org.make file ) and 
 ; additions from cossey
 
 ; so build would run first
@@ -55,20 +55,19 @@ libraries[ckeditor][download][url] = "http://download.cksource.com/CKEditor/CKEd
 ;libraries[colorbox][download][url] = "https://github.com/jackmoore/colorbox/tarball/master"
 ;; libraries[colorbox][download][tag] = v2.1.2
 ;libraries[colorbox][destination] = "libraries"   
-;
-;; media
-;projects[ctools][subdir] = "contrib"
-;projects[file_entity][subdir] = "contrib"
-;projects[file_entity][version] = "1.x-dev"
-;projects[media][subdir] = "contrib"
-;projects[media][version] = "2.x-dev"
-;; titles on media fields http://drupal.org/node/1034034
-;projects[media][patch][1034034] = http://drupal.org/files/issues/media_field_title_reroll.patch
-;; projects[styles][subdir] = "contrib"
-;projects[media_youtube][subdir] = "contrib"
-;projects[media_vimeo][subdir] = "contrib"
-;projects[media_vimeo][version] = "1.x-dev"
-;; add in global configuration of vimeo player
-;projects[media_vimeo][patch][1229304] = http://drupal.org/files/issues/video_display_settings.patch
-;projects[insert][subdir] = "contrib"
-;
+
+; media
+projects[ctools][subdir] = "contrib"
+projects[file_entity][subdir] = "contrib"
+projects[file_entity][version] = "1.x-dev"
+projects[media][subdir] = "contrib"
+projects[media][version] = "2.x-dev"
+; titles on media fields http://drupal.org/node/1034034
+projects[media][patch][1034034] = http://drupal.org/files/issues/media_field_title_reroll.patch
+; projects[styles][subdir] = "contrib"
+projects[media_youtube][subdir] = "contrib"
+projects[media_vimeo][subdir] = "contrib"
+projects[media_vimeo][version] = "1.x-dev"
+; add in global configuration of vimeo player
+projects[media_vimeo][patch][1229304] = http://drupal.org/files/issues/video_display_settings.patch
+projects[insert][subdir] = "contrib"
