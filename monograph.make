@@ -30,8 +30,8 @@ projects[wysiwyg][subdir] = "contrib"
 projects[features][subdir] = "contrib"
 ; patch features to handle shortcut sets http://drupal.org/node/986968
 projects[features][patch][986968] = http://drupal.org/files/issues/features.shortcut_sets_0.patch
-;libraries[ckeditor][download][type] = "get"
-;libraries[ckeditor][download][url] = "http://download.cksource.com/CKEditor/CKEditor/CKEditor%203.4.2/ckeditor_3.4.2.tar.gz"
+libraries[ckeditor][download][type] = "get"
+libraries[ckeditor][download][url] = "http://download.cksource.com/CKEditor/CKEditor/CKEditor%203.4.2/ckeditor_3.4.2.tar.gz"
 
 ; projects
 projects[nodequeue][subdir] = "contrib"
@@ -49,13 +49,12 @@ projects[addthis][version] = "2.1-beta1"
 
 ; asset handling
 ; colorbox & libraries
-; disable colorbox for testing
-; projects[colorbox][subdir] = "contrib"
+projects[colorbox][subdir] = "contrib"
 
-;libraries[colorbox][download][type] = "get"
-;libraries[colorbox][download][url] = "https://github.com/jackmoore/colorbox/tarball/master"
+libraries[colorbox][download][type] = "get"
+libraries[colorbox][download][url] = "https://github.com/jackmoore/colorbox/tarball/master"
 ; libraries[colorbox][download][tag] = v2.1.2
-;libraries[colorbox][destination] = "libraries"   
+libraries[colorbox][destination] = "libraries"   
 
 ; media
 projects[ctools][subdir] = "contrib"
