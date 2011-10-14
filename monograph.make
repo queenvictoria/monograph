@@ -70,5 +70,6 @@ projects[media_youtube][subdir] = "contrib"
 projects[media_vimeo][subdir] = "contrib"
 projects[media_vimeo][version] = "1.x-dev"
 ;; add in global configuration of vimeo player
-projects[media_vimeo][patch][1229304] = http://drupal.org/files/issues/video_display_settings.patch
-;projects[insert][subdir] = "contrib"
+; possibly the error in drush make
+;projects[media_vimeo][patch][1229304] = http://drupal.org/files/issues/video_display_settings.patch
+projects[insert][subdir] = "contrib"
