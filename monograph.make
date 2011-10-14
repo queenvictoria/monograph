@@ -66,7 +66,7 @@ projects[media][version] = "2.x-dev"
 ; possibly the error in drush make
 ; projects[media][patch][1034034] = http://drupal.org/files/issues/media_field_title_reroll.patch
 ; projects[styles][subdir] = "contrib"
-;projects[media_youtube][subdir] = "contrib"
+projects[media_youtube][subdir] = "contrib"
 ;projects[media_vimeo][subdir] = "contrib"
 ;projects[media_vimeo][version] = "1.x-dev"
 ;; add in global configuration of vimeo player
