@@ -26,6 +26,6 @@ projects[drupal][patch][903730] = http://drupal.org/files/issues/drupal.filter-a
 projects[drupal][patch][995156] = http://drupal.org/files/issues/995156-5_portable_taxonomy_permissions.patch
 
 projects[monograph][type] = "profile"
-projects[monograph][download][type] = "http"
+projects[monograph][download][type] = "https"
 projects[monograph][download][url] = "github.com:queenvictoria/monograph.git"
 projects[monograph][download][branch] = "master"
