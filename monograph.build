@@ -26,6 +26,6 @@ projects[drupal][version] = "7.8"
 ; projects[drupal][patch][995156] = http://drupal.org/files/issues/995156-5_portable_taxonomy_permissions.patch
 
 projects[monograph][type] = "profile"
-projects[monograph][download][type] = "http"
-projects[monograph][download][url] = "https://alexli106@github.com/queenvictoria/monograph.git"
+projects[monograph][download][type] = "git"
+projects[monograph][download][url] = "git://github.com/queenvictoria/monograph.git"
 projects[monograph][download][branch] = "master"
