@@ -19,6 +19,7 @@ api = 2
 core = 7.x
 
 ; utils
+projects[profiler][subdir] = "contrib"
 projects[entity][subdir] = "contrib"
 projects[views][subdir] = "contrib"
 projects[devel][subdir] = "developer"
@@ -77,7 +78,7 @@ projects[media_vimeo][version] = "1.x-dev"
 ; projects[media_vimeo][patch][1229304] = http://drupal.org/files/issues/video_display_settings.patch
 projects[insert][subdir] = "contrib"
 
-
+; themes
 projects[tao][type] = "theme"
 projects[tao][subdir] = "contrib"
 
