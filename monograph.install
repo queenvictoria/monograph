@@ -23,6 +23,16 @@
 		
 //	disable comments - we can't disable it in .info as that causes standard_install to fail
 		module_disable(array("comments"));
+		
+  // Enable the admin theme.
+	  db_update('system')
+	    ->fields(array('status' => 1))
+	    ->condition('type', 'theme')
+	    ->condition('name', 'seven')
+	    ->execute();
+	  variable_set('admin_theme', 'seven');
+	  variable_set('node_admin_theme', '1');
+
 	}
 	
 	

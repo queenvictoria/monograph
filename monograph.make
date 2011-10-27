@@ -76,3 +76,8 @@ projects[media_vimeo][version] = "1.x-dev"
 ; possibly the error in drush make - confirmed - but its because these projects aren't downloaded
 ; projects[media_vimeo][patch][1229304] = http://drupal.org/files/issues/video_display_settings.patch
 projects[insert][subdir] = "contrib"
+
+
+projects[tao][type] = "theme"
+projects[tao][subdir] = "contrib"
+
