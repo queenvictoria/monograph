@@ -63,7 +63,7 @@ libraries[colorbox][destination] = "libraries"
 ; media
 projects[ctools][subdir] = "contrib"
 projects[file_entity][subdir] = "contrib"
-projects[file_entity][version] = "1.x-dev"
+projects[file_entity][version] = "2.x-dev"
 projects[media][subdir] = "contrib"
 projects[media][version] = "2.x-dev"
 ; titles on media fields http://drupal.org/node/1034034
