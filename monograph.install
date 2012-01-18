@@ -1,5 +1,10 @@
 <?php
 
+/*  
+  @TODO for (type)project (field)downloads we need a files/downloads directory created
+  @TODO generate needs looking at for collections (it fails badly)
+  @TODO if we're in a subprofile we could create the correct terms
+*/
 	function monograph_install() {
 		include_once DRUPAL_ROOT . '/profiles/standard/standard.install';
 		standard_install();
@@ -25,6 +30,7 @@
 		module_disable(array("comments"));
 		
   // Enable the admin theme.
+  /*
 	  db_update('system')
 	    ->fields(array('status' => 1))
 	    ->condition('type', 'theme')
@@ -32,6 +38,23 @@
 	    ->execute();
 	  variable_set('admin_theme', 'seven');
 	  variable_set('node_admin_theme', '1');
+*/
+
+// Any themes without keys here will get numeric keys and so will be enabled,
+// but not placed into variables.
+    $enable = array(
+      'theme_default' => 'bartik',
+      'admin_theme' => 'seven',
+    );
+    theme_enable($enable);
+ 
+    foreach ($enable as $var => $theme) {
+      if (!is_numeric($var)) {
+        variable_set($var, $theme);
+      }
+    }
+//  disbale the default theme
+//    theme_disable(array('bartik'));
 
 	}
 	

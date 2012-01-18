@@ -20,9 +20,15 @@ core = 7.x
 
 ; utils
 projects[profiler][subdir] = "contrib"
+; needs dev for devel generate support of dev version of field collection
 projects[entity][subdir] = "contrib"
+projects[entity][version] = "1.x-dev"
 projects[views][subdir] = "contrib"
 projects[devel][subdir] = "developer"
+projects[coder][subdir] = "developer"
+projects[devel_themer][subdir] = "developer"
+projects[module_filter][subdir] = "developer"
+
 projects[libraries][subdir] = "contrib"
 projects[transliteration][subdir] = "contrib"
 projects[token][subdir] = "contrib"
@@ -55,9 +61,11 @@ projects[addthis][version] = "2.1-beta1"
 ; colorbox & libraries
 projects[colorbox][subdir] = "contrib"
 
-libraries[colorbox][download][type] = "get"
-libraries[colorbox][download][url] = "https://github.com/jackmoore/colorbox/tarball/master"
+; libraries[colorbox][download][type] = "get"
+; libraries[colorbox][download][url] = "https://github.com/jackmoore/colorbox/tarball/master"
 ; libraries[colorbox][download][tag] = v2.1.2
+libraries[colorbox][download][type] = "git"
+libraries[colorbox][download][url] = "git://github.com/jackmoore/colorbox.git"
 libraries[colorbox][destination] = "libraries"   
 
 ; media
