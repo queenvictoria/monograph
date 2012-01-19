@@ -4,6 +4,9 @@
   @TODO for (type)project (field)downloads we need a files/downloads directory created
   @TODO generate needs looking at for collections (it fails badly)
   @TODO if we're in a subprofile we could create the correct terms
+  @TODO remove author and date meta from project content type (Display author and date information.)
+  @TODO look at pathauto configuration
+  
 */
 	function monograph_install() {
 		include_once DRUPAL_ROOT . '/profiles/standard/standard.install';
@@ -62,9 +65,8 @@
 //	moved to features
 	function _monograph_configure_shortcuts() {
 		$set = shortcut_set_load(st('Default'));
-		$set->links[] =  array('link_path' => 'node/add/project', 'link_title' => st('Add project'));
-		$set->links[] =  array('link_path' => 'admin/content/media', 'link_title' => st('Media library'));
-		
+		$set->links[] =  array('link_path' => 'admin/content/file', 'link_title' => st('Media library'));
+		$set->links[] =  array('link_path' => 'node/add/project', 'link_title' => st('Add project'));		
 		shortcut_set_save($set);
 	}
 	

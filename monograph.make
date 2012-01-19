@@ -86,6 +86,14 @@ projects[media_vimeo][version] = "1.x-dev"
 ; projects[media_vimeo][patch][1229304] = http://drupal.org/files/issues/video_display_settings.patch
 projects[insert][subdir] = "contrib"
 
+; multifile upload
+projects[plupload][subdir] = "contrib"
+projects[plupload][version] = "1.x-dev"
+libraries[plupload][download][type] = "git"
+libraries[plupload][download][url] = "git://github.com/moxiecode/plupload.git"
+libraries[plupload][destination] = "libraries"   
+
+
 ; themes
 projects[tao][type] = "theme"
 projects[tao][subdir] = "contrib"
