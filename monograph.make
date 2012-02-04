@@ -89,6 +89,8 @@ projects[insert][subdir] = "contrib"
 ; multifile upload
 projects[plupload][subdir] = "contrib"
 projects[plupload][version] = "1.x-dev"
+; prevent conflict with field entity module
+projects[plupload][patch] = "http://drupal.org/files/issues/1240654-plupload-namespace-file-uri-to-object.patch"
 libraries[plupload][download][type] = "git"
 libraries[plupload][download][url] = "git://github.com/moxiecode/plupload.git"
 libraries[plupload][destination] = "libraries"   
