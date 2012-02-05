@@ -5,7 +5,7 @@
  */
 
 /**
- * Implementation of hook_node_info().
+ * Implements hook_node_info().
  */
 function monograph_projects_node_info() {
   $items = array(

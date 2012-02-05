@@ -5,7 +5,7 @@
  */
 
 /**
- * Implementation of hook_field_default_fields().
+ * Implements hook_field_default_fields().
  */
 function monograph_projects_field_default_fields() {
   $fields = array();
@@ -35,12 +35,12 @@ function monograph_projects_field_default_fields() {
       'settings' => array(
         'allowed_values' => array(
           0 => array(
-            'parent' => '0',
             'vocabulary' => 'property',
+            'parent' => '0',
           ),
         ),
       ),
-      'translatable' => '1',
+      'translatable' => '0',
       'type' => 'taxonomy_term_reference',
     ),
     'field_instance' => array(
@@ -50,16 +50,16 @@ function monograph_projects_field_default_fields() {
       'description' => 'The type of property. For example size, medium, location, architect.',
       'display' => array(
         'default' => array(
-          'label' => 'hidden',
+          'label' => 'above',
           'module' => 'taxonomy',
           'settings' => array(),
-          'type' => 'taxonomy_term_reference_plain',
-          'weight' => '0',
+          'type' => 'taxonomy_term_reference_link',
+          'weight' => 2,
         ),
       ),
       'entity_type' => 'field_collection_item',
       'field_name' => 'field_property_key',
-      'label' => 'Label',
+      'label' => 'Property',
       'required' => 0,
       'settings' => array(
         'user_register_form' => FALSE,
@@ -72,7 +72,7 @@ function monograph_projects_field_default_fields() {
           'size' => 60,
         ),
         'type' => 'taxonomy_autocomplete',
-        'weight' => '1',
+        'weight' => '0',
       ),
     ),
   );
@@ -100,7 +100,7 @@ function monograph_projects_field_default_fields() {
       ),
       'module' => 'text',
       'settings' => array(),
-      'translatable' => '1',
+      'translatable' => '0',
       'type' => 'text_long',
     ),
     'field_instance' => array(
@@ -110,11 +110,11 @@ function monograph_projects_field_default_fields() {
       'description' => 'The value of a property. For example 1200x2400mm, fibreglass and lace, TZG.',
       'display' => array(
         'default' => array(
-          'label' => 'hidden',
+          'label' => 'above',
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => '1',
+          'weight' => 3,
         ),
       ),
       'entity_type' => 'field_collection_item',
@@ -129,10 +129,10 @@ function monograph_projects_field_default_fields() {
         'active' => 1,
         'module' => 'text',
         'settings' => array(
-          'rows' => '3',
+          'rows' => '5',
         ),
         'type' => 'text_textarea',
-        'weight' => '2',
+        'weight' => '1',
       ),
     ),
   );
@@ -204,7 +204,7 @@ function monograph_projects_field_default_fields() {
           'summary_rows' => 5,
         ),
         'type' => 'text_textarea_with_summary',
-        'weight' => '4',
+        'weight' => '3',
       ),
     ),
   );
@@ -381,6 +381,7 @@ function monograph_projects_field_default_fields() {
         ),
         'enable_tokens' => 1,
         'title' => 'optional',
+        'title_maxlength' => 128,
         'title_value' => '',
         'url' => 0,
       ),
@@ -397,7 +398,7 @@ function monograph_projects_field_default_fields() {
           'label' => 'hidden',
           'module' => 'link',
           'settings' => array(),
-          'type' => 'default',
+          'type' => 'link_default',
           'weight' => '4',
         ),
         'teaser' => array(
@@ -422,9 +423,11 @@ function monograph_projects_field_default_fields() {
         ),
         'enable_tokens' => 1,
         'title' => 'optional',
+        'title_maxlength' => 128,
         'title_value' => '',
         'url' => 0,
         'user_register_form' => FALSE,
+        'validate_url' => 1,
       ),
       'widget' => array(
         'active' => 0,
@@ -450,7 +453,7 @@ function monograph_projects_field_default_fields() {
           0 => 'fid',
         ),
       ),
-      'module' => 'media',
+      'module' => 'mediafield',
       'settings' => array(),
       'translatable' => '1',
       'type' => 'media',
@@ -462,7 +465,7 @@ function monograph_projects_field_default_fields() {
       'display' => array(
         'default' => array(
           'label' => 'hidden',
-          'module' => 'media',
+          'module' => 'mediafield',
           'settings' => array(
             'file_view_mode' => 'media_preview',
           ),
@@ -481,6 +484,7 @@ function monograph_projects_field_default_fields() {
       'label' => 'Media',
       'required' => 0,
       'settings' => array(
+        'file_extensions' => 'jpg jpeg gif png txt doc xls pdf ppt pps odt ods odp mp3 mov m4v mp4 mpeg avi ogg oga ogv wmv ico',
         'user_register_form' => FALSE,
       ),
       'widget' => array(
@@ -498,10 +502,11 @@ function monograph_projects_field_default_fields() {
             'image' => 'image',
             'video' => 'video',
           ),
+          'browser_plugins' => array(),
           'progress_indicator' => 'throbber',
         ),
         'type' => 'media_generic',
-        'weight' => '5',
+        'weight' => '4',
       ),
     ),
   );
@@ -593,26 +598,27 @@ function monograph_projects_field_default_fields() {
       'settings' => array(
         'path' => '',
       ),
-      'translatable' => '1',
+      'translatable' => '0',
       'type' => 'field_collection',
     ),
     'field_instance' => array(
       'bundle' => 'project',
       'default_value' => NULL,
       'deleted' => '0',
-      'description' => 'A property is a quality of a project. For example its physical size, constituent parts, collaborators or the client of the project. ',
+      'description' => 'A property is a quality of a project. For example its physical size, constituent parts, collaborators or the client of the project.',
       'display' => array(
         'default' => array(
-          'label' => 'hidden',
+          'label' => 'above',
           'module' => 'field_collection',
           'settings' => array(
             'add' => 'Add',
             'delete' => 'Delete',
-            'description' => 1,
+            'description' => TRUE,
             'edit' => 'Edit',
+            'view_mode' => 'full',
           ),
           'type' => 'field_collection_view',
-          'weight' => '2',
+          'weight' => 8,
         ),
         'teaser' => array(
           'label' => 'above',
@@ -632,24 +638,24 @@ function monograph_projects_field_default_fields() {
         'active' => 0,
         'module' => 'field_collection',
         'settings' => array(),
-        'type' => 'field_collection_hidden',
-        'weight' => '3',
+        'type' => 'field_collection_embed',
+        'weight' => '5',
       ),
     ),
   );
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('A property is a quality of a project. For example its physical size, constituent parts, collaborators or the client of the project. ');
+  t('A property is a quality of a project. For example its physical size, constituent parts, collaborators or the client of the project.');
   t('All images, video and audio are media. Media can be used against multiple projects if required. Media are titled and captioned in the Media library (see the link above).');
   t('Body');
   t('Date');
   t('Downloads');
-  t('Label');
   t('Links');
   t('Media');
   t('Project type');
   t('Properties');
+  t('Property');
   t('The categories to which this project belongs. For example: Works in progress, installation, performance or archived works.');
   t('The type of property. For example size, medium, location, architect.');
   t('The value of a property. For example 1200x2400mm, fibreglass and lace, TZG.');
