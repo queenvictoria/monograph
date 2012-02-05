@@ -5,7 +5,7 @@
  */
 
 /**
- * Implementation of hook_shortcut_default_shortcut_set().
+ * Implements hook_shortcut_default_shortcut_set().
  */
 function monograph_editors_shortcut_default_shortcut_set() {
   $shortcut_sets = array();

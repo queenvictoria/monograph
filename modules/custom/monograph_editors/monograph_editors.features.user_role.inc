@@ -5,7 +5,7 @@
  */
 
 /**
- * Implementation of hook_user_default_roles().
+ * Implements hook_user_default_roles().
  */
 function monograph_editors_user_default_roles() {
   $roles = array();
