@@ -67,6 +67,7 @@ dependencies[] = mediafield
 dependencies[] = media_internet
 dependencies[] = media_vimeo
 dependencies[] = media_youtube
+dependencies[] = media_soundcloud
 dependencies[] = insert
 dependencies[] = monograph_media
 ; dependencies[] = styles

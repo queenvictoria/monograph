@@ -340,8 +340,16 @@ function monograph_projects_field_default_fields() {
       ),
       'widget' => array(
         'active' => 1,
-        'module' => 'file',
+        'module' => 'media',
         'settings' => array(
+          'allowed_schemes' => array(
+            0 => 'public',
+            1 => 'private',
+          ),
+          'allowed_types' => array(
+            0 => 'image',
+          ),
+          'browser_plugins' => array(),
           'insert' => 0,
           'insert_class' => '',
           'insert_default' => array(
@@ -353,7 +361,7 @@ function monograph_projects_field_default_fields() {
           'insert_width' => '',
           'progress_indicator' => 'throbber',
         ),
-        'type' => 'file_generic',
+        'type' => 'media_generic',
         'weight' => '6',
       ),
     ),
@@ -447,16 +455,27 @@ function monograph_projects_field_default_fields() {
       'deleted' => '0',
       'entity_types' => array(),
       'field_name' => 'field_media',
-      'foreign keys' => array(),
+      'foreign keys' => array(
+        'fid' => array(
+          'columns' => array(
+            'fid' => 'fid',
+          ),
+          'table' => 'file_managed',
+        ),
+      ),
       'indexes' => array(
         'fid' => array(
           0 => 'fid',
         ),
       ),
-      'module' => 'mediafield',
-      'settings' => array(),
-      'translatable' => '1',
-      'type' => 'media',
+      'module' => 'file',
+      'settings' => array(
+        'display_default' => 0,
+        'display_field' => 0,
+        'uri_scheme' => 'public',
+      ),
+      'translatable' => '0',
+      'type' => 'file',
     ),
     'field_instance' => array(
       'bundle' => 'project',
@@ -464,13 +483,11 @@ function monograph_projects_field_default_fields() {
       'description' => 'All images, video and audio are media. Media can be used against multiple projects if required. Media are titled and captioned in the Media library (see the link above).',
       'display' => array(
         'default' => array(
-          'label' => 'hidden',
-          'module' => 'mediafield',
-          'settings' => array(
-            'file_view_mode' => 'media_preview',
-          ),
-          'type' => 'media',
-          'weight' => '7',
+          'label' => 'above',
+          'module' => 'file',
+          'settings' => array(),
+          'type' => 'file_default',
+          'weight' => 9,
         ),
         'teaser' => array(
           'label' => 'above',
@@ -484,7 +501,10 @@ function monograph_projects_field_default_fields() {
       'label' => 'Media',
       'required' => 0,
       'settings' => array(
-        'file_extensions' => 'jpg jpeg gif png txt doc xls pdf ppt pps odt ods odp mp3 mov m4v mp4 mpeg avi ogg oga ogv wmv ico',
+        'description_field' => 0,
+        'file_directory' => '',
+        'file_extensions' => 'jpg jpeg gif png mp3 mov m4v mp4 mpeg avi ogg wmv m4a',
+        'max_filesize' => '',
         'user_register_form' => FALSE,
       ),
       'widget' => array(
@@ -493,6 +513,7 @@ function monograph_projects_field_default_fields() {
         'settings' => array(
           'allowed_schemes' => array(
             'public' => 'public',
+            'soundcloud' => 'soundcloud',
             'vimeo' => 'vimeo',
             'youtube' => 'youtube',
           ),
@@ -502,7 +523,12 @@ function monograph_projects_field_default_fields() {
             'image' => 'image',
             'video' => 'video',
           ),
-          'browser_plugins' => array(),
+          'browser_plugins' => array(
+            'library' => 0,
+            'media_default--media_browser_1' => 0,
+            'media_internet' => 0,
+            'upload' => 0,
+          ),
           'progress_indicator' => 'throbber',
         ),
         'type' => 'media_generic',
