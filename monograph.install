@@ -21,6 +21,11 @@
 			variable_set($v_name, $v_value);
 		}
 		
+//  make the downloads directory as devel generate can't
+    drupal_mkdir("public://downloads");
+    
+    _monograph_dummy_content();
+		
 //	install some modules to make the following work
 //		$result = module_enable(array("shortcuts", "media", "monograph_projects", "monograph_media"));
 
@@ -63,6 +68,12 @@
 
 	}
 	
+	
+  function _monograph_dummy_content() {
+//  create project_types
+//  create properties
+//  create projects
+  }
 	
 //	moved to features
 	function _monograph_configure_shortcuts() {
