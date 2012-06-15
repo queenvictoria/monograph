@@ -81,6 +81,7 @@ projects[media][version] = "2.x-dev"
 projects[media_youtube][subdir] = "contrib"
 projects[media_vimeo][subdir] = "contrib"
 projects[media_vimeo][version] = "1.x-dev"
+projects[media_vimeo][patch][1636032] = http://drupal.org/files/media_vimeo-proportional-sizes-1636032-1.patch
 ;; add in global configuration of vimeo player
 ; possibly the error in drush make - confirmed - but its because these projects aren't downloaded
 ; projects[media_vimeo][patch][1229304] = http://drupal.org/files/issues/video_display_settings.patch
