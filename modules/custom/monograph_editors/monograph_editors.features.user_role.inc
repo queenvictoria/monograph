@@ -10,7 +10,7 @@
 function monograph_editors_user_default_roles() {
   $roles = array();
 
-  // Exported role: editor
+  // Exported role: editor.
   $roles['editor'] = array(
     'name' => 'editor',
     'weight' => '3',

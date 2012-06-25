@@ -10,7 +10,7 @@
 function monograph_editors_user_default_permissions() {
   $permissions = array();
 
-  // Exported permission: access administration pages
+  // Exported permission: access administration pages.
   $permissions['access administration pages'] = array(
     'name' => 'access administration pages',
     'roles' => array(
@@ -19,7 +19,7 @@ function monograph_editors_user_default_permissions() {
     'module' => 'system',
   );
 
-  // Exported permission: access all webform results
+  // Exported permission: access all webform results.
   $permissions['access all webform results'] = array(
     'name' => 'access all webform results',
     'roles' => array(
@@ -29,18 +29,19 @@ function monograph_editors_user_default_permissions() {
     'module' => 'webform',
   );
 
-  // Exported permission: access content
+  // Exported permission: access content.
   $permissions['access content'] = array(
     'name' => 'access content',
     'roles' => array(
       0 => 'administrator',
       1 => 'anonymous user',
       2 => 'authenticated user',
+      3 => 'editor',
     ),
     'module' => 'node',
   );
 
-  // Exported permission: access content overview
+  // Exported permission: access content overview.
   $permissions['access content overview'] = array(
     'name' => 'access content overview',
     'roles' => array(
@@ -50,7 +51,7 @@ function monograph_editors_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: access dashboard
+  // Exported permission: access dashboard.
   $permissions['access dashboard'] = array(
     'name' => 'access dashboard',
     'roles' => array(
@@ -60,7 +61,16 @@ function monograph_editors_user_default_permissions() {
     'module' => 'dashboard',
   );
 
-  // Exported permission: access own webform results
+  // Exported permission: access overlay.
+  $permissions['access overlay'] = array(
+    'name' => 'access overlay',
+    'roles' => array(
+      0 => 'administrator',
+    ),
+    'module' => 'overlay',
+  );
+
+  // Exported permission: access own webform results.
   $permissions['access own webform results'] = array(
     'name' => 'access own webform results',
     'roles' => array(
@@ -69,16 +79,17 @@ function monograph_editors_user_default_permissions() {
     'module' => 'webform',
   );
 
-  // Exported permission: access own webform submissions
+  // Exported permission: access own webform submissions.
   $permissions['access own webform submissions'] = array(
     'name' => 'access own webform submissions',
     'roles' => array(
       0 => 'administrator',
+      1 => 'editor',
     ),
     'module' => 'webform',
   );
 
-  // Exported permission: access site in maintenance mode
+  // Exported permission: access site in maintenance mode.
   $permissions['access site in maintenance mode'] = array(
     'name' => 'access site in maintenance mode',
     'roles' => array(
@@ -87,7 +98,7 @@ function monograph_editors_user_default_permissions() {
     'module' => 'system',
   );
 
-  // Exported permission: access site reports
+  // Exported permission: access site reports.
   $permissions['access site reports'] = array(
     'name' => 'access site reports',
     'roles' => array(
@@ -96,7 +107,7 @@ function monograph_editors_user_default_permissions() {
     'module' => 'system',
   );
 
-  // Exported permission: access site-wide contact form
+  // Exported permission: access site-wide contact form.
   $permissions['access site-wide contact form'] = array(
     'name' => 'access site-wide contact form',
     'roles' => array(
@@ -105,7 +116,7 @@ function monograph_editors_user_default_permissions() {
     'module' => 'contact',
   );
 
-  // Exported permission: access toolbar
+  // Exported permission: access toolbar.
   $permissions['access toolbar'] = array(
     'name' => 'access toolbar',
     'roles' => array(
@@ -115,7 +126,7 @@ function monograph_editors_user_default_permissions() {
     'module' => 'toolbar',
   );
 
-  // Exported permission: access user contact forms
+  // Exported permission: access user contact forms.
   $permissions['access user contact forms'] = array(
     'name' => 'access user contact forms',
     'roles' => array(
@@ -124,7 +135,7 @@ function monograph_editors_user_default_permissions() {
     'module' => 'contact',
   );
 
-  // Exported permission: add media from remote sources
+  // Exported permission: add media from remote sources.
   $permissions['add media from remote sources'] = array(
     'name' => 'add media from remote sources',
     'roles' => array(
@@ -134,7 +145,7 @@ function monograph_editors_user_default_permissions() {
     'module' => 'media_internet',
   );
 
-  // Exported permission: administer actions
+  // Exported permission: administer actions.
   $permissions['administer actions'] = array(
     'name' => 'administer actions',
     'roles' => array(
@@ -143,17 +154,7 @@ function monograph_editors_user_default_permissions() {
     'module' => 'system',
   );
 
-  // Exported permission: administer blocks
-  $permissions['administer blocks'] = array(
-    'name' => 'administer blocks',
-    'roles' => array(
-      0 => 'administrator',
-      1 => 'editor',
-    ),
-    'module' => 'block',
-  );
-
-  // Exported permission: administer contact forms
+  // Exported permission: administer contact forms.
   $permissions['administer contact forms'] = array(
     'name' => 'administer contact forms',
     'roles' => array(
@@ -162,7 +163,7 @@ function monograph_editors_user_default_permissions() {
     'module' => 'contact',
   );
 
-  // Exported permission: administer content types
+  // Exported permission: administer content types.
   $permissions['administer content types'] = array(
     'name' => 'administer content types',
     'roles' => array(
@@ -171,26 +172,26 @@ function monograph_editors_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: administer field collections
+  // Exported permission: administer field collections.
   $permissions['administer field collections'] = array(
     'name' => 'administer field collections',
     'roles' => array(
       0 => 'administrator',
+      1 => 'editor',
     ),
     'module' => 'field_collection',
   );
 
-  // Exported permission: administer files
+  // Exported permission: administer files.
   $permissions['administer files'] = array(
     'name' => 'administer files',
     'roles' => array(
       0 => 'administrator',
-      1 => 'editor',
     ),
     'module' => 'file_entity',
   );
 
-  // Exported permission: administer filters
+  // Exported permission: administer filters.
   $permissions['administer filters'] = array(
     'name' => 'administer filters',
     'roles' => array(
@@ -199,7 +200,7 @@ function monograph_editors_user_default_permissions() {
     'module' => 'filter',
   );
 
-  // Exported permission: administer image styles
+  // Exported permission: administer image styles.
   $permissions['administer image styles'] = array(
     'name' => 'administer image styles',
     'roles' => array(
@@ -208,7 +209,7 @@ function monograph_editors_user_default_permissions() {
     'module' => 'image',
   );
 
-  // Exported permission: administer menu
+  // Exported permission: administer menu.
   $permissions['administer menu'] = array(
     'name' => 'administer menu',
     'roles' => array(
@@ -218,7 +219,7 @@ function monograph_editors_user_default_permissions() {
     'module' => 'menu',
   );
 
-  // Exported permission: administer modules
+  // Exported permission: administer modules.
   $permissions['administer modules'] = array(
     'name' => 'administer modules',
     'roles' => array(
@@ -227,7 +228,7 @@ function monograph_editors_user_default_permissions() {
     'module' => 'system',
   );
 
-  // Exported permission: administer nodequeue
+  // Exported permission: administer nodequeue.
   $permissions['administer nodequeue'] = array(
     'name' => 'administer nodequeue',
     'roles' => array(
@@ -236,7 +237,7 @@ function monograph_editors_user_default_permissions() {
     'module' => 'nodequeue',
   );
 
-  // Exported permission: administer nodes
+  // Exported permission: administer nodes.
   $permissions['administer nodes'] = array(
     'name' => 'administer nodes',
     'roles' => array(
@@ -246,7 +247,7 @@ function monograph_editors_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: administer shortcuts
+  // Exported permission: administer shortcuts.
   $permissions['administer shortcuts'] = array(
     'name' => 'administer shortcuts',
     'roles' => array(
@@ -255,7 +256,7 @@ function monograph_editors_user_default_permissions() {
     'module' => 'shortcut',
   );
 
-  // Exported permission: administer site configuration
+  // Exported permission: administer site configuration.
   $permissions['administer site configuration'] = array(
     'name' => 'administer site configuration',
     'roles' => array(
@@ -264,7 +265,7 @@ function monograph_editors_user_default_permissions() {
     'module' => 'system',
   );
 
-  // Exported permission: administer software updates
+  // Exported permission: administer software updates.
   $permissions['administer software updates'] = array(
     'name' => 'administer software updates',
     'roles' => array(
@@ -273,17 +274,16 @@ function monograph_editors_user_default_permissions() {
     'module' => 'system',
   );
 
-  // Exported permission: administer taxonomy
+  // Exported permission: administer taxonomy.
   $permissions['administer taxonomy'] = array(
     'name' => 'administer taxonomy',
     'roles' => array(
       0 => 'administrator',
-      1 => 'editor',
     ),
     'module' => 'taxonomy',
   );
 
-  // Exported permission: administer themes
+  // Exported permission: administer themes.
   $permissions['administer themes'] = array(
     'name' => 'administer themes',
     'roles' => array(
@@ -292,7 +292,7 @@ function monograph_editors_user_default_permissions() {
     'module' => 'system',
   );
 
-  // Exported permission: administer url aliases
+  // Exported permission: administer url aliases.
   $permissions['administer url aliases'] = array(
     'name' => 'administer url aliases',
     'roles' => array(
@@ -301,7 +301,7 @@ function monograph_editors_user_default_permissions() {
     'module' => 'path',
   );
 
-  // Exported permission: block IP addresses
+  // Exported permission: block IP addresses.
   $permissions['block IP addresses'] = array(
     'name' => 'block IP addresses',
     'roles' => array(
@@ -310,7 +310,7 @@ function monograph_editors_user_default_permissions() {
     'module' => 'system',
   );
 
-  // Exported permission: bypass node access
+  // Exported permission: bypass node access.
   $permissions['bypass node access'] = array(
     'name' => 'bypass node access',
     'roles' => array(
@@ -320,22 +320,36 @@ function monograph_editors_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: create page content
-  $permissions['create page content'] = array(
-    'name' => 'create page content',
+  // Exported permission: create article content.
+  $permissions['create article content'] = array(
+    'name' => 'create article content',
     'roles' => array(
       0 => 'administrator',
     ),
     'module' => 'node',
   );
 
-  // Exported permission: create project content
-  $permissions['create project content'] = array(
-    'name' => 'create project content',
-    'roles' => array(),
+  // Exported permission: create page content.
+  $permissions['create page content'] = array(
+    'name' => 'create page content',
+    'roles' => array(
+      0 => 'administrator',
+      1 => 'editor',
+    ),
+    'module' => 'node',
   );
 
-  // Exported permission: create url aliases
+  // Exported permission: create project content.
+  $permissions['create project content'] = array(
+    'name' => 'create project content',
+    'roles' => array(
+      0 => 'administrator',
+      1 => 'editor',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: create url aliases.
   $permissions['create url aliases'] = array(
     'name' => 'create url aliases',
     'roles' => array(
@@ -345,13 +359,17 @@ function monograph_editors_user_default_permissions() {
     'module' => 'path',
   );
 
-  // Exported permission: create webform content
+  // Exported permission: create webform content.
   $permissions['create webform content'] = array(
     'name' => 'create webform content',
-    'roles' => array(),
+    'roles' => array(
+      0 => 'administrator',
+      1 => 'editor',
+    ),
+    'module' => 'node',
   );
 
-  // Exported permission: customize shortcut links
+  // Exported permission: customize shortcut links.
   $permissions['customize shortcut links'] = array(
     'name' => 'customize shortcut links',
     'roles' => array(
@@ -361,7 +379,7 @@ function monograph_editors_user_default_permissions() {
     'module' => 'shortcut',
   );
 
-  // Exported permission: delete all webform submissions
+  // Exported permission: delete all webform submissions.
   $permissions['delete all webform submissions'] = array(
     'name' => 'delete all webform submissions',
     'roles' => array(
@@ -370,91 +388,152 @@ function monograph_editors_user_default_permissions() {
     'module' => 'webform',
   );
 
-  // Exported permission: delete any page content
+  // Exported permission: delete any article content.
+  $permissions['delete any article content'] = array(
+    'name' => 'delete any article content',
+    'roles' => array(
+      0 => 'administrator',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: delete any page content.
   $permissions['delete any page content'] = array(
     'name' => 'delete any page content',
     'roles' => array(
       0 => 'administrator',
+      1 => 'editor',
     ),
     'module' => 'node',
   );
 
-  // Exported permission: delete any project content
+  // Exported permission: delete any project content.
   $permissions['delete any project content'] = array(
     'name' => 'delete any project content',
-    'roles' => array(),
+    'roles' => array(
+      0 => 'administrator',
+      1 => 'editor',
+    ),
+    'module' => 'node',
   );
 
-  // Exported permission: delete any webform content
+  // Exported permission: delete any webform content.
   $permissions['delete any webform content'] = array(
     'name' => 'delete any webform content',
-    'roles' => array(),
+    'roles' => array(
+      0 => 'administrator',
+      1 => 'editor',
+    ),
+    'module' => 'node',
   );
 
-  // Exported permission: delete own page content
+  // Exported permission: delete own article content.
+  $permissions['delete own article content'] = array(
+    'name' => 'delete own article content',
+    'roles' => array(
+      0 => 'administrator',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: delete own page content.
   $permissions['delete own page content'] = array(
     'name' => 'delete own page content',
     'roles' => array(
       0 => 'administrator',
+      1 => 'editor',
     ),
     'module' => 'node',
   );
 
-  // Exported permission: delete own project content
+  // Exported permission: delete own project content.
   $permissions['delete own project content'] = array(
     'name' => 'delete own project content',
-    'roles' => array(),
+    'roles' => array(
+      0 => 'administrator',
+      1 => 'editor',
+    ),
+    'module' => 'node',
   );
 
-  // Exported permission: delete own webform content
+  // Exported permission: delete own webform content.
   $permissions['delete own webform content'] = array(
     'name' => 'delete own webform content',
-    'roles' => array(),
+    'roles' => array(
+      0 => 'administrator',
+      1 => 'editor',
+    ),
+    'module' => 'node',
   );
 
-  // Exported permission: delete own webform submissions
+  // Exported permission: delete own webform submissions.
   $permissions['delete own webform submissions'] = array(
     'name' => 'delete own webform submissions',
     'roles' => array(
       0 => 'administrator',
+      1 => 'editor',
     ),
     'module' => 'webform',
   );
 
-  // Exported permission: delete revisions
+  // Exported permission: delete revisions.
   $permissions['delete revisions'] = array(
     'name' => 'delete revisions',
+    'roles' => array(
+      0 => 'administrator',
+      1 => 'editor',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: delete terms in project_type.
+  $permissions['delete terms in project_type'] = array(
+    'name' => 'delete terms in project_type',
+    'roles' => array(
+      0 => 'editor',
+    ),
+    'module' => 'taxonomy',
+  );
+
+  // Exported permission: delete terms in property.
+  $permissions['delete terms in property'] = array(
+    'name' => 'delete terms in property',
+    'roles' => array(
+      0 => 'editor',
+    ),
+    'module' => 'taxonomy',
+  );
+
+  // Exported permission: delete terms in tags.
+  $permissions['delete terms in tags'] = array(
+    'name' => 'delete terms in tags',
+    'roles' => array(
+      0 => 'administrator',
+      1 => 'editor',
+    ),
+    'module' => 'taxonomy',
+  );
+
+  // Exported permission: edit all webform submissions.
+  $permissions['edit all webform submissions'] = array(
+    'name' => 'edit all webform submissions',
+    'roles' => array(
+      0 => 'administrator',
+      1 => 'editor',
+    ),
+    'module' => 'webform',
+  );
+
+  // Exported permission: edit any article content.
+  $permissions['edit any article content'] = array(
+    'name' => 'edit any article content',
     'roles' => array(
       0 => 'administrator',
     ),
     'module' => 'node',
   );
 
-  // Exported permission: delete terms in 1
-  $permissions['delete terms in 1'] = array(
-    'name' => 'delete terms in 1',
-    'roles' => array(
-      0 => 'administrator',
-    ),
-    'module' => 'taxonomy',
-  );
-
-  // Exported permission: delete terms in 2
-  $permissions['delete terms in 2'] = array(
-    'name' => 'delete terms in 2',
-    'roles' => array(),
-  );
-
-  // Exported permission: edit all webform submissions
-  $permissions['edit all webform submissions'] = array(
-    'name' => 'edit all webform submissions',
-    'roles' => array(
-      0 => 'administrator',
-    ),
-    'module' => 'webform',
-  );
-
-  // Exported permission: edit any page content
+  // Exported permission: edit any page content.
   $permissions['edit any page content'] = array(
     'name' => 'edit any page content',
     'roles' => array(
@@ -464,25 +543,27 @@ function monograph_editors_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: edit any project content
+  // Exported permission: edit any project content.
   $permissions['edit any project content'] = array(
     'name' => 'edit any project content',
     'roles' => array(
-      0 => 'editor',
+      0 => 'administrator',
+      1 => 'editor',
     ),
     'module' => 'node',
   );
 
-  // Exported permission: edit any webform content
+  // Exported permission: edit any webform content.
   $permissions['edit any webform content'] = array(
     'name' => 'edit any webform content',
     'roles' => array(
-      0 => 'editor',
+      0 => 'administrator',
+      1 => 'editor',
     ),
     'module' => 'node',
   );
 
-  // Exported permission: edit file
+  // Exported permission: edit file.
   $permissions['edit file'] = array(
     'name' => 'edit file',
     'roles' => array(
@@ -492,52 +573,84 @@ function monograph_editors_user_default_permissions() {
     'module' => 'file_entity',
   );
 
-  // Exported permission: edit own page content
-  $permissions['edit own page content'] = array(
-    'name' => 'edit own page content',
+  // Exported permission: edit own article content.
+  $permissions['edit own article content'] = array(
+    'name' => 'edit own article content',
     'roles' => array(
       0 => 'administrator',
     ),
     'module' => 'node',
   );
 
-  // Exported permission: edit own project content
+  // Exported permission: edit own page content.
+  $permissions['edit own page content'] = array(
+    'name' => 'edit own page content',
+    'roles' => array(
+      0 => 'administrator',
+      1 => 'editor',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: edit own project content.
   $permissions['edit own project content'] = array(
     'name' => 'edit own project content',
-    'roles' => array(),
+    'roles' => array(
+      0 => 'administrator',
+      1 => 'editor',
+    ),
+    'module' => 'node',
   );
 
-  // Exported permission: edit own webform content
+  // Exported permission: edit own webform content.
   $permissions['edit own webform content'] = array(
     'name' => 'edit own webform content',
-    'roles' => array(),
+    'roles' => array(
+      0 => 'administrator',
+      1 => 'editor',
+    ),
+    'module' => 'node',
   );
 
-  // Exported permission: edit own webform submissions
+  // Exported permission: edit own webform submissions.
   $permissions['edit own webform submissions'] = array(
     'name' => 'edit own webform submissions',
     'roles' => array(
       0 => 'administrator',
+      1 => 'editor',
     ),
     'module' => 'webform',
   );
 
-  // Exported permission: edit terms in 1
-  $permissions['edit terms in 1'] = array(
-    'name' => 'edit terms in 1',
+  // Exported permission: edit terms in project_type.
+  $permissions['edit terms in project_type'] = array(
+    'name' => 'edit terms in project_type',
     'roles' => array(
-      0 => 'administrator',
+      0 => 'editor',
     ),
     'module' => 'taxonomy',
   );
 
-  // Exported permission: edit terms in 2
-  $permissions['edit terms in 2'] = array(
-    'name' => 'edit terms in 2',
-    'roles' => array(),
+  // Exported permission: edit terms in property.
+  $permissions['edit terms in property'] = array(
+    'name' => 'edit terms in property',
+    'roles' => array(
+      0 => 'editor',
+    ),
+    'module' => 'taxonomy',
   );
 
-  // Exported permission: import media
+  // Exported permission: edit terms in tags.
+  $permissions['edit terms in tags'] = array(
+    'name' => 'edit terms in tags',
+    'roles' => array(
+      0 => 'administrator',
+      1 => 'editor',
+    ),
+    'module' => 'taxonomy',
+  );
+
+  // Exported permission: import media.
   $permissions['import media'] = array(
     'name' => 'import media',
     'roles' => array(
@@ -547,7 +660,7 @@ function monograph_editors_user_default_permissions() {
     'module' => 'media',
   );
 
-  // Exported permission: manipulate all queues
+  // Exported permission: manipulate all queues.
   $permissions['manipulate all queues'] = array(
     'name' => 'manipulate all queues',
     'roles' => array(
@@ -557,7 +670,7 @@ function monograph_editors_user_default_permissions() {
     'module' => 'nodequeue',
   );
 
-  // Exported permission: manipulate queues
+  // Exported permission: manipulate queues.
   $permissions['manipulate queues'] = array(
     'name' => 'manipulate queues',
     'roles' => array(
@@ -567,16 +680,17 @@ function monograph_editors_user_default_permissions() {
     'module' => 'nodequeue',
   );
 
-  // Exported permission: revert revisions
+  // Exported permission: revert revisions.
   $permissions['revert revisions'] = array(
     'name' => 'revert revisions',
     'roles' => array(
       0 => 'administrator',
+      1 => 'editor',
     ),
     'module' => 'node',
   );
 
-  // Exported permission: switch shortcut sets
+  // Exported permission: switch shortcut sets.
   $permissions['switch shortcut sets'] = array(
     'name' => 'switch shortcut sets',
     'roles' => array(
@@ -585,7 +699,7 @@ function monograph_editors_user_default_permissions() {
     'module' => 'shortcut',
   );
 
-  // Exported permission: use text format filtered_html
+  // Exported permission: use text format filtered_html.
   $permissions['use text format filtered_html'] = array(
     'name' => 'use text format filtered_html',
     'roles' => array(
@@ -597,7 +711,7 @@ function monograph_editors_user_default_permissions() {
     'module' => 'filter',
   );
 
-  // Exported permission: use text format full_html
+  // Exported permission: use text format full_html.
   $permissions['use text format full_html'] = array(
     'name' => 'use text format full_html',
     'roles' => array(
@@ -606,7 +720,7 @@ function monograph_editors_user_default_permissions() {
     'module' => 'filter',
   );
 
-  // Exported permission: view file
+  // Exported permission: view file.
   $permissions['view file'] = array(
     'name' => 'view file',
     'roles' => array(
@@ -617,30 +731,31 @@ function monograph_editors_user_default_permissions() {
     'module' => 'file_entity',
   );
 
-  // Exported permission: view own unpublished content
+  // Exported permission: view own unpublished content.
   $permissions['view own unpublished content'] = array(
     'name' => 'view own unpublished content',
     'roles' => array(
       0 => 'administrator',
+      1 => 'editor',
     ),
     'module' => 'node',
   );
 
-  // Exported permission: view revisions
+  // Exported permission: view revisions.
   $permissions['view revisions'] = array(
     'name' => 'view revisions',
     'roles' => array(
       0 => 'administrator',
+      1 => 'editor',
     ),
     'module' => 'node',
   );
 
-  // Exported permission: view the administration theme
+  // Exported permission: view the administration theme.
   $permissions['view the administration theme'] = array(
     'name' => 'view the administration theme',
     'roles' => array(
       0 => 'administrator',
-      1 => 'editor',
     ),
     'module' => 'system',
   );
