@@ -75,6 +75,8 @@ dependencies[] = monograph_media
 
 ; Monograph features
 dependencies[] = monograph_projects
+; fails on setting permssions
+; try features dev
 dependencies[] = monograph_editors
 ; dependencies[] = monograph_permissions
 dependencies[] = monograph_pages
@@ -82,7 +84,15 @@ dependencies[] = monograph_pages
 ; Developer
 dependencies[] = devel
 dependencies[] = devel_generate
+dependencies[] = simplehtmldom
 dependencies[] = devel_themer
 dependencies[] = coder
 dependencies[] = coder_review
 dependencies[] = module_filter
+
+
+; Information added by drush on 2012-06-25
+version = "master-dev"
+project = "monograph"
+datestamp = "1340622097"
+

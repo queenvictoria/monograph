@@ -26,6 +26,7 @@ projects[entity][version] = "1.x-dev"
 projects[views][subdir] = "contrib"
 projects[devel][subdir] = "developer"
 projects[coder][subdir] = "developer"
+projects[simplehtmldom][subdir] = "developer"
 projects[devel_themer][subdir] = "developer"
 projects[module_filter][subdir] = "developer"
 
@@ -38,6 +39,7 @@ projects[xmlsitemap][subdir] = "contrib"
 projects[google_analytics][subdir] = "contrib"
 projects[wysiwyg][subdir] = "contrib"
 projects[features][subdir] = "contrib"
+projects[features][version] = "1.x-dev"
 ; patch features to handle shortcut sets http://drupal.org/node/986968
 ; projects[features][patch][986968] = http://drupal.org/files/issues/features.shortcut_sets_0.patch
 libraries[ckeditor][download][type] = "get"
