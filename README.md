@@ -1,4 +1,4 @@
-TO DO
+##TO DO##
 v	fix vimeo display
 v	add captions/credits/titles/descriptions to media items 
 -	disable comments
@@ -24,8 +24,8 @@ Things we have to do post install
     $ cd demo-site`
 1. Check the remotes
     `$ git remote -v`
-    `origin  git://github.com/queenvictoria/monograph.git (fetch)
-    origin	git://github.com/queenvictoria/monograph.git (push)`
+    `origin  git://github.com/queenvictoria/monograph.git (fetch)`
+    `origin	git://github.com/queenvictoria/monograph.git (push)`
 1. Rename the origin
     `$ git remote rename origin upstream`
 1. Create a new repo at Github
@@ -33,10 +33,10 @@ Things we have to do post install
     `$ git remote add origin git@github.com:Laudanum/sturt.git`
 1. Check the new origins
     `$ git remote -v`
-    `origin  git@github.com:Laudanum/sturt.git (fetch)
-    origin	git@github.com:Laudanum/sturt.git (push)
-    upstream	git://github.com/queenvictoria/monograph.git (fetch)
-    upstream	git://github.com/queenvictoria/monograph.git (push)`
+    `origin  git@github.com:Laudanum/sturt.git (fetch)`
+    `origin	git@github.com:Laudanum/sturt.git (push)`
+    `upstream	git://github.com/queenvictoria/monograph.git (fetch)`
+    `upstream	git://github.com/queenvictoria/monograph.git (push)`
 1. Push up the new fork
     `$ git push origin master`
 
@@ -46,8 +46,8 @@ I had to make a couple of manual changes to .git/config
 	remote = origin
 	merge = refs/heads/master`
 1. Correct the syntax for the monograph remove
-    `upstream	git@github.com:queenvictoria/monograph.git (fetch)
-    upstream	git@github.com:queenvictoria/monograph.git (push)`
+    `upstream	git@github.com:queenvictoria/monograph.git (fetch)`
+    `upstream	git@github.com:queenvictoria/monograph.git (push)`
 
 ##Update upstream from a fork##
 
