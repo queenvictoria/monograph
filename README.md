@@ -40,3 +40,7 @@ upstream	git://github.com/queenvictoria/monograph.git (push)
 `
 1. Push up the new fork
 `$ git push origin master`
+
+##Update upstream from a fork##
+
+`$ git fetch origin -v; git fetch upstream -v; git merge upstream/master`
