@@ -41,6 +41,15 @@ upstream	git://github.com/queenvictoria/monograph.git (push)
 1. Push up the new fork
 `$ git push origin master`
 
+I had to make a couple of manual changes to .git/config
+1. Update [branch master]
+`[branch "master"]
+	remote = origin
+	merge = refs/heads/master`
+1. Correct the syntax for the monograph remove
+`upstream	git@github.com:queenvictoria/monograph.git (fetch)
+upstream	git@github.com:queenvictoria/monograph.git (push)`
+
 ##Update upstream from a fork##
 
 `$ git fetch origin -v; git fetch upstream -v; git merge upstream/master`
