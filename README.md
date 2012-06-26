@@ -53,3 +53,7 @@ upstream	git@github.com:queenvictoria/monograph.git (push)`
 ##Update upstream from a fork##
 
 `$ git fetch origin -v; git fetch upstream -v; git merge upstream/master`
+
+##Push updates to upstream##
+
+`$ git push upstream`
