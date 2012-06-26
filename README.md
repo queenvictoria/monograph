@@ -20,35 +20,34 @@ Things we have to do post install
 ##To fork this repo (outside of Github)##
 
 1. Clone the Monograph repo
-`$ git clone git@github.com:queenvictoria/monograph.git demo-site
-$ cd demo-site`
+    `$ git clone git@github.com:queenvictoria/monograph.git demo-site
+    $ cd demo-site`
 1. Check the remotes
-`$ git remote -v`
-`origin  git://github.com/queenvictoria/monograph.git (fetch)
-origin	git://github.com/queenvictoria/monograph.git (push)`
+    `$ git remote -v`
+    `origin  git://github.com/queenvictoria/monograph.git (fetch)
+    origin	git://github.com/queenvictoria/monograph.git (push)`
 1. Rename the origin
-`$ git remote rename origin upstream`
+    `$ git remote rename origin upstream`
 1. Create a new repo at Github
 1. Add origins for the new repo
-`$ git remote add origin git@github.com:Laudanum/sturt.git`
+    `$ git remote add origin git@github.com:Laudanum/sturt.git`
 1. Check the new origins
-`$ git remote -v`
-`origin  git@github.com:Laudanum/sturt.git (fetch)
-origin	git@github.com:Laudanum/sturt.git (push)
-upstream	git://github.com/queenvictoria/monograph.git (fetch)
-upstream	git://github.com/queenvictoria/monograph.git (push)
-`
+    `$ git remote -v`
+    `origin  git@github.com:Laudanum/sturt.git (fetch)
+    origin	git@github.com:Laudanum/sturt.git (push)
+    upstream	git://github.com/queenvictoria/monograph.git (fetch)
+    upstream	git://github.com/queenvictoria/monograph.git (push)`
 1. Push up the new fork
-`$ git push origin master`
+    `$ git push origin master`
 
 I had to make a couple of manual changes to .git/config
 1. Update [branch master]
-`[branch "master"]
+    `[branch "master"]
 	remote = origin
 	merge = refs/heads/master`
 1. Correct the syntax for the monograph remove
-`upstream	git@github.com:queenvictoria/monograph.git (fetch)
-upstream	git@github.com:queenvictoria/monograph.git (push)`
+    `upstream	git@github.com:queenvictoria/monograph.git (fetch)
+    upstream	git@github.com:queenvictoria/monograph.git (push)`
 
 ##Update upstream from a fork##
 
