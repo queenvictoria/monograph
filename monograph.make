@@ -104,4 +104,8 @@ libraries[plupload][destination] = "libraries"
 ; themes
 projects[tao][type] = "theme"
 projects[tao][subdir] = "contrib"
+projects[zen][type] = "theme"
+projects[zen][subdir] = "contrib"
+projects[omega][type] = "theme"
+projects[omega][subdir] = "contrib"
 
