@@ -9,8 +9,8 @@
 * v	add editor shortcuts
 * x	look at media gallery modules
 * -	add user 1 to editors
-* - Less CSS
-* - Panels
+* v Less CSS
+* v Panels
 * v Responsive base themes
 
 ##Things we have to do post install##
