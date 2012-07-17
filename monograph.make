@@ -24,6 +24,7 @@ projects[profiler][subdir] = "contrib"
 projects[entity][subdir] = "contrib"
 projects[entity][version] = "1.x-dev"
 projects[views][subdir] = "contrib"
+projects[panels][subdir] = "contrib"
 projects[devel][subdir] = "developer"
 projects[coder][subdir] = "developer"
 projects[simplehtmldom][subdir] = "developer"
@@ -42,10 +43,15 @@ projects[metatags][subdir] = "contrib"
 projects[wysiwyg][subdir] = "contrib"
 projects[features][subdir] = "contrib"
 projects[features][version] = "1.x-dev"
+projects[less][subdir] = "contrib"
+projects[sass][subdir] = "contrib"
 ; patch features to handle shortcut sets http://drupal.org/node/986968
 ; projects[features][patch][986968] = http://drupal.org/files/issues/features.shortcut_sets_0.patch
 libraries[ckeditor][download][type] = "get"
 libraries[ckeditor][download][url] = "http://download.cksource.com/CKEditor/CKEditor/CKEditor%203.4.2/ckeditor_3.4.2.tar.gz"
+libraries[lessphp][download][type] = "git"
+libraries[lessphp][download][url] = "git://github.com/leafo/lessphp.git"
+libraries[lessphp][destination] = "libraries"   
 
 ; projects
 projects[nodequeue][subdir] = "contrib"
