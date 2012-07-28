@@ -15,7 +15,8 @@ projects[drupal][version] = "7.14"
 
 ; Use vocabulary machine name for permissions
 ; http://drupal.org/node/995156
-projects[drupal][patch][995156] = http://drupal.org/files/issues/995156-5_portable_taxonomy_permissions.patch
+; causes out of memory on windows
+; projects[drupal][patch][995156] = http://drupal.org/files/issues/995156-5_portable_taxonomy_permissions.patch
 
 projects[monograph][type] = "profile"
 projects[monograph][download][type] = "git"
