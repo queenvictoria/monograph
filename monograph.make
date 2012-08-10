@@ -45,6 +45,7 @@ projects[features][subdir] = "contrib"
 projects[features][version] = "1.x-dev"
 projects[less][subdir] = "contrib"
 projects[sass][subdir] = "contrib"
+projects[conditional_styles][subdir] = "contrib"
 ; patch features to handle shortcut sets http://drupal.org/node/986968
 ; projects[features][patch][986968] = http://drupal.org/files/issues/features.shortcut_sets_0.patch
 libraries[ckeditor][download][type] = "get"
