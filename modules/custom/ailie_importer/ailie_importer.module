@@ -1,0 +1,22 @@
+<?php
+
+    function ailie_importer_feeds_plugins() {
+        $info = array();
+        $info['IsEngineParser'] = array(
+            'name' => 'isEngine Works Parser',
+            'description' => 'Imports works from the Ailie DB.',
+            'handler' => array(
+                'parent' => 'FeedsParser', // A plugin needs to derive either directly or indirectly from FeedsFetcher, FeedsParser or FeedsProcessor.
+                'class' => 'FeedsIsEngineParser',
+                'file' => 'FeedsIsEngineParser.inc',
+                'path' => drupal_get_path('module', 'ailie_importer'),
+            ),
+        );
+        return $info;
+    }
+
+
+    function ailie_importer_enable() {
+        cache_clear_all('plugins:feeds:plugins', 'cache');
+    }
+?>
