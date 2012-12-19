@@ -18,7 +18,6 @@ dependencies[] = file
 dependencies[] = menu
 dependencies[] = path
 dependencies[] = taxonomy
-dependencies[] = toolbar
 dependencies[] = block
 
 ; Core other
@@ -38,6 +37,9 @@ dependencies[] = "overlay"
 dependencies[] = "rdf"
 
 ; Contrib
+dependencies[] = admin_menu
+dependencies[] = admin_menu_toolbar
+
 dependencies[] = "features"
 dependencies[] = libraries
 dependencies[] = wysiwyg
