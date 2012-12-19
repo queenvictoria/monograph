@@ -30,9 +30,13 @@ projects[coder][subdir] = "developer"
 projects[simplehtmldom][subdir] = "developer"
 projects[devel_themer][subdir] = "developer"
 projects[module_filter][subdir] = "developer"
-projects[admin][subdir] = "developer"
-projects[admin_menu][subdir] = "developer"
-projects[varnish][subdir] = "developer"
+projects[admin][subdir] = "contrib"
+projects[admin_menu][subdir] = "contrib"
+projects[varnish][subdir] = "contrib"
+projects[admin_views][subdir] = "contrib"
+projects[views_bulk_operations][subdir] = "contrib"
+
+
 
 projects[libraries][subdir] = "contrib"
 projects[transliteration][subdir] = "contrib"
